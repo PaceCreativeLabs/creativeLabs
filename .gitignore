@@ -1,1 +1,5 @@
 assets/
+!assets/css/theme.css
+!assets/css/theme.min.css
+!assets/css/swatch-blue-white.css
+!assets/css/swatch-white-blue.css
