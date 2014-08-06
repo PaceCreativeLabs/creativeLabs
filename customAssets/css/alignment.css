@@ -1,0 +1,12 @@
+/*
+Alignment Styles
+*/
+
+.align-right {
+	float:right;
+}
+
+.align-center {
+	margin:auto;
+	text-align:center;
+}
