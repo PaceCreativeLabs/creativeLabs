@@ -1,2 +1,9 @@
+<<<<<<< HEAD
 Hi
 Hello
+=======
+Branch naming scheme
+====================
+- feat-foo: specify the feature you're working on
+- bug-foo: specify the bug you're fixing
+>>>>>>> 06545c6ba0c17d66855e64a1067fc2e3daead90e
