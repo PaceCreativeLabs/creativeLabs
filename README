@@ -1,6 +1,9 @@
-=======
 Branch naming scheme
 ====================
 - feat-foo: specify the feature you're working on
 - bug-foo: specify the bug you're fixing
-=======
+====================
+
+Branches
+========
+feat-services: working on the services page
