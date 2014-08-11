@@ -4,4 +4,6 @@ assets/
 !assets/css/theme.min.css
 !assets/css/swatch-blue-white.css
 !assets/css/swatch-white-blue.css
+!assets/css/swatch-blue-white.min.css
+!assets/css/swatch-white-blue.min.css
 !assets/js/map.min.js
