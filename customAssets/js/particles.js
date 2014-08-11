@@ -16,12 +16,13 @@
             root.py = 100;
             root.fixed = false;
 
-            // var root2 = nodes[1];
-            // root2.radius = 100;
-            // root2.fixed = true;
-            // root2.px = 0;
-            // root2.py = 0;
-            // root2.force = force;
+            var root2 = nodes[1];
+            root2.radius = 50;
+            root2.fixed = true;
+            root2.px = 200;
+            root2.py = 150;
+            root2.force = force;
+            root2.visible=false;
 
             force.start();
 
@@ -35,6 +36,9 @@
                 .attr("r", function(d) { return d.radius - 2; })
                 .style("fill", function(d, i) {
                   var colors = ["#FFFFFF","#CBF6FF","#0D5868"]
+                    if(d.radius == 50){
+                      return "#29b2cf";
+                    }
                     return  colors[i % 3];//color(-1); 
                 })
                 .style("opacity","0.9");
