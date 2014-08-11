@@ -32,9 +32,36 @@
 
         <link rel="stylesheet" href="../customAssets/css/general.css">
         <link rel="stylesheet" href="../assets/css/fonts.min.css" media="screen">
+
+        <script type="text/javascript" src="../customAssets/js/d3/d3.js"></script>
+        <script type="text/javascript" src="../customAssets/js/d3/d3.geom.js"></script>
+        <script type="text/javascript" src="../customAssets/js/d3/d3.layout.js"></script>
+
+        <style type="text/css">
+            circle {
+                stroke: #000;
+                stroke-opacity: 0;
+                fill:#000000;
+            }
+
+            #particles {
+                //position:fixed;
+                left:0px;
+                top:0px;
+                z-index:1000;
+                overflow:visible;
+                margin:-100px 0px;
+                padding:0px 0px;
+            }
+            body{
+                cursor:default;
+            }
+
+        </style>
         <!-- <link type="text/css" href="../customAssets/css/vdstyle.css"> -->
     </head>
     <body>
+        
         <header id="masthead" class="navbar navbar-sticky swatch-blue-white" role="banner">
             <div class="container">
                 <div class="navbar-header">
@@ -200,46 +227,13 @@
         <div id="content" role="main">
             <section class="section swatch-blue-white">
                 <div class="container">
-                    <!-- <div id="chart" class="vdchart"></div> -->
-                    <!-- <div id="slider-flex3" class="flexslider text-left no-padding" data-flex-speed="5000" data-flex-animation="slide" data-flex-controls="hide" data-flex-directions="show" data-flex-controlsalign="center" data-flex-captionhorizontal="alternate" data-flex-captionvertical="bottom"
-                        data-flex-controlsposition="" data-flex-directions-type="">
-                            <ul class="slides no-padding">
-                                <li>
-                                    <figure>
-                                        <header class="section-header no-underline">
-                                            <center><img src="../assets/images/logo.png" class="main-logo" data-start="background-position: 50% 0px"
-                                    data-top-bottom="background-position: 50% -100px"/></center>
-                                            <h1 class="headline hyper hairline inline">Seidenberg <br> Creative Labs</h1>
-                                            <br>
-                                            <br>
-                                            <p class="subtitle-dark">#alert("</p>
-                                            <p class="subtitle-light">Run by students!</p>
-                                            <p class="subtitle-dark">");</p>
-                                        </header>
-                                    </figure>
-                                </li>
-                                <li>
-                                    <figure>
-                                        <header class="section-header no-underline">
-                                            <center><img src="../assets/images/logo.png" class="main-logo" data-start="background-position: 50% 0px"
-                                    data-top-bottom="background-position: 50% -100px"/></center>
-                                            <h1 class="headline hyper hairline inline">Seidenberg <br> Creative Labs</h1>
-                                            <br>
-                                            <br>
-                                            <p class="subtitle-dark">#alert("</p>
-                                            <p class="subtitle-light">Run by students!</p>
-                                            <p class="subtitle-dark">");</p>
-                                        </header>
-                                    </figure>
-                                </li>
-                            </ul>
-                        </div> -->
                     <header class="section-header no-underline">
-                        <center><img src="../assets/images/logo.png" class="main-logo" data-start="background-position: 50% 0px"
-                data-top-bottom="background-position: 50% -100px" style="max-width:10%;min-width:100px"/></center>
-                        <h1 class="headline hyper hairline inline">Seidenberg <br> Creative Labs</h1>
+                        <div id="particles"></div>
+                        <!-- <center><img src="../assets/images/logo.png" class="main-logo" data-start="background-position: 50% 0px"
+                data-top-bottom="background-position: 50% -100px" style="max-width:10%;min-width:100px"/></center> -->
+                        <h1 class="headline hyper light inline">Seidenberg <br> Creative Labs</h1>
                         <br><br>
-                        <h2 class="light">Research & Development</h3>
+                        <h2 class="regular">Research & Development</h3>
                         <br>
                         <p class="subtitle-dark">alert("</p>
                         <p class="subtitle-light">Run by students!</p>
@@ -692,9 +686,11 @@
         <a class="go-top hex-alt" href="javascript:void(0)">
             <i class="fa fa-angle-up"></i>
         </a>
-        <script src="http://d3js.org/d3.v3.min.js"></script>
         <script src="../assets/js/packages.min.js"></script>
         <script src="../assets/js/theme.min.js"></script>
+
+        <script src="../customAssets/js/particles.js"></script>
+
         <!-- <script src="../customAssets/js/vdscript.js"></script> -->
     </body>
 </html>
