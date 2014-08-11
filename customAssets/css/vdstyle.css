@@ -1,0 +1,25 @@
+circle {
+    stroke: #EFEDF5;
+    fill: #EFEDF5;
+    pointer-events: none;
+}
+line {
+    pointer-events: none;
+    stroke: #EFEDF5;
+    stroke-width: 2px;
+    opacity: .05;
+}
+path{
+    stroke: #EFEDF5;
+    stroke-width: 0px;
+}
+#chart {
+	position:absolute;
+	left:0px;
+	top:-200px;
+	margin-top:-50px;
+	border:50px solid white;
+}
+.vdchart {
+	border:50px solid white;
+}
