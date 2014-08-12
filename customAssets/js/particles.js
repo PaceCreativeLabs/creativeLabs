@@ -37,7 +37,7 @@
                 .style("fill", function(d, i) {
                   var colors = ["#FFFFFF","#CBF6FF","#0D5868"]
                     if(d.radius == 50){
-                      return "#29b2cf";
+                      return "transparent";
                     }
                     return  colors[i % 3];//color(-1); 
                 })

@@ -1,3 +1,7 @@
+body{
+	cursor:default;
+	background:#29b2cf;
+}
 
 .bg-red {
 	background:#B84316 !important;
