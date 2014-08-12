@@ -1,5 +1,10 @@
 
-.no-pad-bottom{
+.bg-red {
+	background:#B84316 !important;
+	color:#B84316 !important;
+}
+
+.no-pad-bottom {
 	padding-bottom:0px;
 	margin-bottom:0px;
 }
@@ -33,6 +38,10 @@
 
 .pad-bot {
 	margin-bottom:75px;
+}
+
+.pad-top {
+	margin-top:50px;
 }
 
 .align-right {
