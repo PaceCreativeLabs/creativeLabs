@@ -1,0 +1,18 @@
+{
+	"projects":{
+		"schimmel":{
+			"projectTitle":"Schimmel Theater",
+			"imgUrl":"../assets/images/design/vector/img-8-600x518.png",
+			"descriptionTitle":"TITLE",
+			"description":"DESCRIPTION",
+			"urlText":"https://URL"
+		},
+		"loma":{
+			"projectTitle":"LOMA School",
+			"imgUrl":"../assets/images/design/vector/img-8-600x518.png",
+			"descriptionTitle":"TITLE",
+			"description":"DESCRIPTION",
+			"urlText":"https://URL"
+		}
+	}
+}
