@@ -3,16 +3,18 @@
 		"schimmel":{
 			"projectTitle":"Schimmel Theater",
 			"imgUrl":"../assets/images/design/vector/img-8-600x518.png",
-			"descriptionTitle":"TITLE",
-			"description":"DESCRIPTION",
-			"urlText":"https://URL"
+			"descriptionTitle":"Our Prized Possession!",
+			"description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta eu turpis id varius. Morbi venenatis pretium ipsum, eget vestibulum massa. Nulla vel lacus a felis dignissim fermentum. Suspendisse ullamcorper nulla massa, et mollis libero scelerisque a. Phasellus nec scelerisque libero, non vehicula mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget tincidunt diam. Fusce mollis elementum aliquam. Quisque non lobortis erat, dapibus lobortis massa. Praesent sed justo fermentum, egestas nulla eget, luctus nisl. Vestibulum massa orci, tincidunt vitae nulla non, lobortis semper enim.",
+			"urlText":"http://schimmel.pace.edu",
+			"identifier":"schimmel"
 		},
 		"loma":{
 			"projectTitle":"LOMA School",
-			"imgUrl":"../assets/images/design/vector/img-8-600x518.png",
-			"descriptionTitle":"TITLE",
-			"description":"DESCRIPTION",
-			"urlText":"https://URL"
+			"imgUrl":"../assets/images/design/vector/404.png",
+			"descriptionTitle":"A Work in Progress!",
+			"description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta eu turpis id varius. Morbi venenatis pretium ipsum, eget vestibulum massa. Nulla vel lacus a felis dignissim fermentum. Suspendisse ullamcorper nulla massa, et mollis libero scelerisque a. Phasellus nec scelerisque libero, non vehicula mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget tincidunt diam. Fusce mollis elementum aliquam. Quisque non lobortis erat, dapibus lobortis massa. Praesent sed justo fermentum, egestas nulla eget, luctus nisl. Vestibulum massa orci, tincidunt vitae nulla non, lobortis semper enim.",
+			"urlText":"http://www.lowermanhattanmarketing.com/",
+			"identifier":"loma"
 		}
 	}
 }
