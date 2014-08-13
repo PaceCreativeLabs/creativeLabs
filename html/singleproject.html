@@ -31,6 +31,54 @@
 		<link rel="stylesheet" href="../assets/css/fonts.min.css" media="screen">
 		<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
 		<script type="text/javascript" src="../customAssets/js/projects.js"></script>
+		<script type="text/javascript">
+			function moreInfo(event){
+				var $projectTitle = $('#projectTitle');
+				var $imgUrl = $('#imgUrl');
+				var $descriptionTitle = $('#descriptionTitle');
+				var $description = $('#description');
+				var $urlText = $('#urlText');
+				console.log(event);
+				var identifier = event.getAttribute('alt');
+				console.log("== [ Value of this images alt " + identifier + " ] ==");
+				$.getJSON('../projectsInfo.json', function(result){
+					$.each(result.projects, function(key, value){
+						if(value.identifier == identifier){
+							var content = $description.text();
+							if(content.length > 0){
+								console.log("== [ Existing content recognized ] ==")
+								$projectTitle.empty().html(value.projectTitle);
+								console.log("== [ projectTitle set ] ==");
+								var src = value.imgUrl;
+								$imgUrl.setAttribute('src', value.imgUrl);
+								console.log("== [ imgUrl set ] ==");
+								$descriptionTitle.empty().html(value.descriptionTitle);
+								console.log("== [ descriptionTitle set ] ==");
+								$description.empty().html(value.description);
+								console.log("== [ description set ] ==");
+								$urlText.empty().setAttribute('href', value.urlText);
+								console.log("== [ urlText set ] ==");
+								$urlText.empty().html(value.urlText);
+								console.log("== [ urlText set ] ==");
+							}else{
+								$projectTitle.html(value.projectTitle);
+								console.log("== [ projectTitle set ] ==");
+								$imgUrl.setAttribute('src', value.imgUrl);
+								console.log("== [ imgUrl set ] ==");
+								$descriptionTitle.html(value.descriptionTitle);
+								console.log("== [ descriptionTitle set ] ==");
+								$description.html(value.description);
+								console.log("== [ description set ] ==");
+								$urlText.setAttribute('href', value.urlText);
+								console.log("== [ urlText set ] ==");
+								$urlText.html(value.urlText);
+								console.log("== [ urlText set ] ==");
+							}
+						}
+					});
+				});
+			}
+		</script>
 	</head>
 	<body>
 		<header id="masthead" class="navbar navbar-sticky swatch-blue-white" role="banner">
@@ -61,20 +109,20 @@
 			<section class="section swatch-blue-white">
 				<div class="container">
 					<header class="section-header text-center underline">
-						<h1 class="headline hyper hairline" id="projectTitle"></h1>
+						<h1 class="headline hyper hairline" id="projectTitle">Schimmel Theater</h1>
 					</header>
 					<br>
 					<div class="row">
 						<div class="col-md-6 ">
-							<a class="magnific hover-animate portfolio-figure" id="imgUrl" title="Thats a nice image">
-								<img alt="some image" id="imgURL">
+							<a class="magnific hover-animate portfolio-figure">
+								<img alt="some image" id="imgURL" src="../assets/images/design/vector/img-8-600x518.png">
 								<i class="fa fa-search-plus"></i>
 							</a>
 						</div>
 						<div class="col-md-6">
-							<h1 class="bordered-header" id="descriptionTitle"></h1>
-							<p id="description"></p>
-							<a class="portfolio-url overlay" href="#" id="urlText"><span class="overlay">URL</span></a>
+							<h1 class="bordered-header" id="descriptionTitle">Our Prized Possession!</h1>
+							<p id="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta eu turpis id varius. Morbi venenatis pretium ipsum, eget vestibulum massa. Nulla vel lacus a felis dignissim fermentum. Suspendisse ullamcorper nulla massa, et mollis libero scelerisque a. Phasellus nec scelerisque libero, non vehicula mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget tincidunt diam. Fusce mollis elementum aliquam. Quisque non lobortis erat, dapibus lobortis massa. Praesent sed justo fermentum, egestas nulla eget, luctus nisl. Vestibulum massa orci, tincidunt vitae nulla non, lobortis semper enim.</p>
+							<a class="portfolio-url overlay" id="urlText"><span class="overlay">URL</span>http://www.schimmel.pace.edu</a>
 						</div>
 					</div>
 					<div class="row">
