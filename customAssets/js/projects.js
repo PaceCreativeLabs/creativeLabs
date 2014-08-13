@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	var $projectList = $('#projectList');
-
+	
 	$.getJSON('../projectsInfo.json', function(result){
 		console.log("== [ $.getJSON - Success ] ==");
 		$.each(result.projects, function(key, value){
