@@ -30,40 +30,6 @@
 		<link rel="stylesheet" href="../assets/css/swatch-yellow-black.min.css">
 		<link rel="stylesheet" href="../assets/css/fonts.min.css" media="screen">
 		<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
-		<script type="text/javascript" src="../customAssets/js/projects.js"></script>
-		<script type="text/javascript">
-			function moreInfo(event){
-				var $projectTitle = $('#projectTitle');
-				var $imgUrl = $('#imgUrl');
-				var $descriptionTitle = $('#descriptionTitle');
-				var $description = $('#description');
-				var $urlText = $('#urlText');
-				var identifier = event.getAttribute('alt');
-				console.log("== [ Value of this images alt " + identifier + " ] ==");
-				$.getJSON('../projectsInfo.json', function(result){
-					$.each(result.projects, function(key, value){
-						if(value.identifier == identifier){
-							var content = $description.text();
-							if(content.length > 0){
-								console.log("== [ Existing content recognized ] ==")
-								$projectTitle.empty().html(value.projectTitle);
-								console.log("== [ projectTitle set ] ==");
-								$descriptionTitle.empty().html(value.descriptionTitle);
-								console.log("== [ descriptionTitle set ] ==");
-								$description.empty().html(value.description);
-								console.log("== [ description set ] ==");
-								$urlText.empty().html(value.urlText);
-								console.log("== [ urlText set ] ==");
-								$urlText.attr("href", value.url);
-								console.log("== [ url set ] ==");
-								$imgUrl.attr("src", value.imgUrl);
-								console.log("== [ imgUrl set ] ==");
-							}
-						}
-					});
-				});
-			}
-		</script>
 	</head>
 	<body>
 		<header id="masthead" class="navbar navbar-sticky swatch-blue-white" role="banner">
@@ -96,10 +62,9 @@
 					<header class="section-header text-center underline">
 						<h1 class="headline hyper hairline" id="projectTitle">Schimmel Theater</h1>
 					</header>
-					<br>
 					<div class="row">
 						<div class="col-md-6 ">
-							<a class="magnific hover-animate portfolio-figure">
+							<a class="magnific hover-animate portfolio-figure" id="url" href="http://schimmel.pace.edu">
 								<img alt="some image" id="imgURL" src="../assets/images/design/vector/img-8-600x518.png">
 								<i class="fa fa-search-plus"></i>
 							</a>
@@ -153,5 +118,32 @@
 		</a>
 		<script src="../assets/js/packages.min.js"></script>
 		<script src="../assets/js/theme.min.js"></script>
+		<script type="text/javascript" src="../customAssets/js/projects.js"></script>
+		<script type="text/javascript">
+			function moreInfo(event){
+				var $projectTitle = $('#projectTitle');
+				var $imgUrl = $('#imgUrl');
+				var $descriptionTitle = $('#descriptionTitle');
+				var $description = $('#description');
+				var $urlText = $('#urlText');
+				var $url = $('#url');
+				var identifier = event.getAttribute('alt');
+				var imahg = document.getElementById("imgUrl");
+				console.log("== [ Value of this images alt " + identifier + " ] ==");
+				$.getJSON('../projectsInfo.json', function(result){
+					$.each(result.projects, function(key, value){
+						if(value.identifier == identifier){
+							$projectTitle.empty().html(value.projectTitle);
+							$descriptionTitle.empty().html(value.descriptionTitle);
+							$description.empty().html(value.description);
+							$urlText.empty().html(value.urlText);
+							$url.attr("href", value.imgUrl);
+							$url.attr("title", value.projectTitle);
+							document.getElementById('imgURL').setAttribute('src', value.imgUrl)
+						}
+					});
+				});
+			}
+		</script>
 	</body>
 </html>
