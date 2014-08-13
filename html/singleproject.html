@@ -48,30 +48,16 @@
 								console.log("== [ Existing content recognized ] ==")
 								$projectTitle.empty().html(value.projectTitle);
 								console.log("== [ projectTitle set ] ==");
-								var src = value.imgUrl;
-								$imgUrl.setAttribute('src', value.imgUrl);
-								console.log("== [ imgUrl set ] ==");
 								$descriptionTitle.empty().html(value.descriptionTitle);
 								console.log("== [ descriptionTitle set ] ==");
 								$description.empty().html(value.description);
 								console.log("== [ description set ] ==");
-								$urlText.empty().setAttribute('href', value.urlText);
-								console.log("== [ urlText set ] ==");
 								$urlText.empty().html(value.urlText);
 								console.log("== [ urlText set ] ==");
-							}else{
-								$projectTitle.html(value.projectTitle);
-								console.log("== [ projectTitle set ] ==");
-								$imgUrl.setAttribute('src', value.imgUrl);
+								$urlText.attr("href", value.url);
+								console.log("== [ url set ] ==");
+								$imgUrl.attr("src", value.imgUrl);
 								console.log("== [ imgUrl set ] ==");
-								$descriptionTitle.html(value.descriptionTitle);
-								console.log("== [ descriptionTitle set ] ==");
-								$description.html(value.description);
-								console.log("== [ description set ] ==");
-								$urlText.setAttribute('href', value.urlText);
-								console.log("== [ urlText set ] ==");
-								$urlText.html(value.urlText);
-								console.log("== [ urlText set ] ==");
 							}
 						}
 					});
