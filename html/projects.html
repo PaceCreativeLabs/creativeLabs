@@ -248,6 +248,14 @@
 		</a>
 		<script src="../assets/js/packages.min.js"></script>
 		<script src="../assets/js/theme.min.js"></script>
-		<script src="../customAssets/js/projects.js"></script>
+		<script type="text/javascript">
+			function context(project){
+				window.location.href = 'singleproject.html#' + project;
+			}
+			function singleProject(project){
+				var projectTitle = project.getAttribute('data-project-title');
+				context(projectTitle);
+			}
+		</script>
 	</body>
 </html>

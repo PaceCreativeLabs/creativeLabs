@@ -64,8 +64,8 @@
 					</header>
 					<div class="row">
 						<div class="col-md-6 ">
-							<a class="magnific hover-animate portfolio-figure" id="url" href="http://schimmel.pace.edu">
-								<img alt="some image" id="imgURL" src="../assets/images/design/vector/img-8-600x518.png">
+							<a class="magnific hover-animate portfolio-figure" id="url">
+								<img alt="some image" id="imgURL">
 								<i class="fa fa-search-plus"></i>
 							</a>
 						</div>
@@ -118,18 +118,17 @@
 		</a>
 		<script src="../assets/js/packages.min.js"></script>
 		<script src="../assets/js/theme.min.js"></script>
-		<script type="text/javascript" src="../customAssets/js/projects.js"></script>
 		<script type="text/javascript">
+			var $projectTitle = $('#projectTitle');
+			var $imgUrl = $('#imgUrl');
+			var $descriptionTitle = $('#descriptionTitle');
+			var $description = $('#description');
+			var $urlText = $('#urlText');
+			var $url = $('#url');
+			var $projectList = $('#projectList');
 			function moreInfo(event){
-				var $projectTitle = $('#projectTitle');
-				var $imgUrl = $('#imgUrl');
-				var $descriptionTitle = $('#descriptionTitle');
-				var $description = $('#description');
-				var $urlText = $('#urlText');
-				var $url = $('#url');
 				var identifier = event.getAttribute('alt');
-				var imahg = document.getElementById("imgUrl");
-				console.log("== [ Value of this images alt " + identifier + " ] ==");
+				// console.log("== [ Value of this images alt " + identifier + " ] ==");
 				$.getJSON('../projectsInfo.json', function(result){
 					$.each(result.projects, function(key, value){
 						if(value.identifier == identifier){
@@ -144,6 +143,63 @@
 					});
 				});
 			}
+			function parseURL(url) {
+				var a =  document.createElement('a');
+				a.href = url;
+				return {
+					source: url,
+					protocol: a.protocol.replace(':',''),
+					host: a.hostname,
+					port: a.port,
+					query: a.search,
+					params: (function(){
+						var ret = {},
+							seg = a.search.replace(/^\?/,'').split('&'),
+							len = seg.length, i = 0, s;
+						for (;i<len;i++) {
+							if (!seg[i]) { continue; }
+							s = seg[i].split('=');
+							ret[s[0]] = s[1];
+						}
+						return ret;
+					})(),
+					file: (a.pathname.match(/\/([^\/?#]+)$/i) || [,''])[1],
+					hash: a.hash.replace('#',''),
+					path: a.pathname.replace(/^([^\/])/,'/$1'),
+					relative: (a.href.match(/tps?:\/\/[^\/]+(.+)/) || [,''])[1],
+					segments: a.pathname.replace(/^\//,'').split('/')
+				};
+			}
+			whichProject = parseURL(window.location.href);
+			$(document).ready(function(){
+				$.getJSON('../projectsInfo.json', function(result){
+					$.each(result.projects, function(key, value){
+						$projectList.append('<li class="col-md-2 text-center" data-os-animation="" data-os-animation-delay="">'+
+							'<div class="box-round box-medium">'+
+								'<div class="box-dummy"></div>'+
+								'<a class="box-inner" href="javascript:void(0)">'+
+									'<img alt="' + value.identifier + '" src="' + value.imgUrl + '" onclick="moreInfo(this)">'+
+								'</a>'+
+							'</div>'+
+							'<h3 class="text-center">'+
+								'<a href="javascript:void(0)">' + value.projectTitle + '</a>'+
+							'</h3>'+
+						'</li>');
+						if(value.identifier == whichProject.hash){
+							$projectTitle.html(value.projectTitle);
+							$descriptionTitle.html(value.descriptionTitle);
+							$description.html(value.description);
+							$urlText.html(value.urlText);
+							$url.attr("href", value.imgUrl);
+							$url.attr("title", value.projectTitle);
+							document.getElementById('imgURL').setAttribute('src', value.imgUrl);
+						}
+					});
+				}).fail(function(jqxhr, textStatus, error){
+					var err = textStatus + ', ' + error;
+					console.log("== [ Request Failed: " + err + " ] ==");
+				});
+			});
 		</script>
 	</body>
 </html>
