@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="csstransforms csstransforms3d csstransitions skrollr skrollr-desktop">
 	<head>
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -30,6 +30,7 @@
 		<link rel="stylesheet" href="../assets/css/swatch-white-red.min.css">
 		<link rel="stylesheet" href="../assets/css/swatch-yellow-black.min.css">
 		<link rel="stylesheet" href="../customAssets/css/general.css">
+		<link rel="stylesheet" href="../customAssets/css/swatch-darkblue-white.css">
 		<link rel="stylesheet" href="../customAssets/css/particles.css">
 		<link rel="stylesheet" href="../assets/css/fonts.min.css" media="screen">
 		<script type="text/javascript" src="../customAssets/js/d3/d3.js"></script>
@@ -37,26 +38,15 @@
 		<script type="text/javascript" src="../customAssets/js/d3/d3.layout.js"></script>
 
 		<style type="text/css">
-			/*circle{
-				stroke: #000;
-				stroke-opacity: 0;
-				fill:#000000;
-			}
-			#particles{
-				//position:fixed;
-				left:0px;
-				top:0px;
+			.arrow-aligned {
+				position:fixed;
+				bottom:0px;
 				z-index:1000;
-				overflow:visible;
-				//margin:-100px 0px;
-				margin-top:-120px;
-				margin-bottom:-60px;
-				padding:0px 0px;
-			}*/
-			/*body{
-				cursor:default;
-				background:#29b2cf;
-			}*/
+			}
+
+			.arrow-fixed {
+
+			}
 		</style>
 		<!-- <link type="text/css" href="../customAssets/css/vdstyle.css"> -->
 	</head>
@@ -87,24 +77,30 @@
 		</header>
 		<div id="content" role="main">
 			<section class="section swatch-blue-white">
+
 				<div class="container">
 					<header class="section-header no-underline">
-						<div id="particles"></div>
-						<h1 class="headline hyper light inline">Seidenberg <br> Creative Labs</h1>
+						<div id="particles" class="hidden-xs"></div>
+						<h1 class="headline hyper light inline">Seidenberg</h1>
+						<h1 class="headline hyper inline">Creative Labs</h1>
+						<h1 class="headline hyper inline"></h1>
 						<br><br>
-						<h2 class="regular">Research & Development</h3>
-						<br>
+						<h2 class="regular">Research & Development</h2>
+						<a href="#about">
+							<i class="fa fa-chevron-down" style="font-size:50px;margin-top:40px"></i>
+						</a>
+						<!-- <br>
 						<p class="subtitle-dark">alert("</p>
 						<p class="subtitle-light">Run by students!</p>
-						<p class="subtitle-dark">");</p>
+						<p class="subtitle-dark">");</p> -->
 					</header>
 				</div>
-				<div class="background-media" style="background-image: url('../customAssets/images/bg-abstract.jpg'); background-repeat: ; background-size: ; background-attachment: ; background-position: ; background-size: cover;" data-start="background-position: 50% 100px"
+				<!-- <div class="background-media" style="background-image: url('../customAssets/images/bg-abstract.jpg'); background-repeat: ; background-size: ; background-attachment: ; background-position: ; background-size: cover;" data-start="background-position: 50% 100px"
 				data-top-bottom="background-position: 50% -50px">
 				</div>
-				<div class="background-overlay" style="background-color:rgba(41, 178, 207, 0.7)"></div>
+				<div class="background-overlay" style="background-color:rgba(41, 178, 207, 0.7)"></div> -->
 			</section>
-			<section class="section swatch-white-blue">
+			<section id="about" class="section swatch-darkblue-white">
 				<div class="decor-top">
 					<svg class="decor" height="100%" preserveaspectratio="none" version="1.1" viewbox="0 0 100 100" width="100%" xmlns="http://www.w3.org/2000/svg">
 						<path d="M0 0 C50 100 50 100 100 0  L100 100 0 100" stroke-width="0"></path>
@@ -116,7 +112,7 @@
 							<p><img class="aligncenter size-full wp-image-2322" alt="app" src="../assets/images/design/vector/404.png" width="500" height="600"></p>
 						</div>
 						<div class="col-md-6  text-default">
-							<h1 class="text-left super hairline bordered-header">Student Developers.</h1>
+							<h1 class="text-left super light bordered-header">Student Developers.</h1>
 							<p class="lead text-left">Creative Labs gives Pace University students real life experience interacting with teams, developing professional grade products, and sharing their fresh thinking and creative outlook with clients.</p>
 							<br>
 							<p class="lead text-left">Everything written above is a lie. Except for the punctuation. All of that was completely sincere and from the heart. And now this sentence fills the page to a decent level.</p>
@@ -132,15 +128,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="section swatch-white-blue has-top">
-				<div class="decor-top">
-					<svg class="decor hidden-xs hidden-sm" height="100%" preserveAspectRatio="none" version="1.1" viewBox="0 0 100 100" width="100%" xmlns="http://www.w3.org/2000/svg">
-						<path d="M0 100 L2 60 L4 100 L6 60 L8 100 L10 60 L12 100 L14 60 L16 100 L18 60 L20 100 L22 60 L24 100 L26 60 L28 100 L30 60 L32 100 L34 60 L36 100 L38 60 L40 100 L42 60 L44 100 L46 60 L48 100 L50 60 L52 100 L54 60 L56 100 L58 60 L60 100 L62 60 L64 100 L66 60 L68 100 L70 60 L72 100 L74 60 L76 100 L78 60 L80 100 L82 60 L84 100 L86 60 L88 100 L90 60 L92 100 L94 60 L96 100 L98 60 L100 100 Z" stroke-width="0"></path>
-					</svg>
-					<svg class="decor visible-xs visible-sm" height="100%" preserveAspectRatio="none" version="1.1" viewBox="0 0 100 100" width="100%" xmlns="http://www.w3.org/2000/svg">
-						<path d="M0 100 L5 60 L10 100 L5 60 L10 100 L15 60 L20 100 L25 60 L30 100 L35 60 L40 100 L45 60 L50 100 L55 60 L60 100 L65 60 L70 100 L75 60 L80 100 L85 60 L90 100 L95 60 L100 100"></path>
-					</svg>
-				</div>
+			<section class="section swatch-white-blue">
 				<div class="container">
 					<header class="section-header ">
 						<h1 class="headline super hairline">Our Skills</h1>
@@ -164,7 +152,7 @@
 										<i class="fa fa-bar-chart-o" data-animation="swing"></i>
 									</a>
 								</div>
-								<h3 class="text-center "><a href="/single-service.html">Reasearch</a></h3>
+								<h3 class="text-center "><a href="/single-service.html">Research</a></h3>
 								<p class="text-center">Wikipedia ain't got nothin' on us. We research long and hard. We research everywhere. We research everything. All the things.</p>
 							</li>
 							<li class="col-md-4 text-center" data-os-animation="" data-os-animation-delay="">
@@ -196,7 +184,7 @@
 					</header>
 					<div class="text-default os-animation" data-os-animation="fadeInUp" data-os-animation-delay=".0s">
 						<div class="portfolio isotope no-transition portfolio-hex portfolio-shadows row">
-							<div class="portfolio-item infinite-item col-xs-offset-0 col-sm-offset-2 col-lg-8 col-md-8 col-sm-8 filter-video">
+							<div class="portfolio-item infinite-item col-xs-offset-0 col-sm-offset-3 col-lg-6 col-md-6 col-sm-6 col-lg-offset-3 col-md-offset-3 filter-video">
 								<figure class="portfolio-figure">
 									<a href="/portfolio-item-big.html">
 										<img width="600" height="518" src="../assets/images/design/vector/img-4-600x518.png" class="img-responsive" alt="some image">
@@ -212,7 +200,7 @@
 						</div>
 					</div>
 					<center>
-						<a href="projects.html" class="btn btn-lg btn-warning btn-icon-right align-center">View Some More Projects
+						<a href="projects.html" class="btn btn-lg btn-primary btn-icon-right align-center">View Some More Projects
 							<span class="hex-alt hex-alt-big">
 								<i class="fa fa-chevron-right" data-animation="wobble"></i>
 							</span>
@@ -223,13 +211,10 @@
 			<footer id="footer" role="contentinfo">
 				<section class="section swatch-white-blue has-top">
 					<div class="decor-top">
-					<svg class="decor hidden-xs hidden-sm" height="100%" preserveAspectRatio="none" version="1.1" viewBox="0 0 100 100" width="100%" xmlns="http://www.w3.org/2000/svg">
-						<path d="M0 100 Q 2.5 40 5 100 Q 7.5 40 10 100 Q 12.5 40 15 100 Q 17.5 40 20 100 Q 22.5 40 25 100 Q 27.5 40 30 100 Q 32.5 40 35 100 Q 37.5 40 40 100 Q 42.5 40 45 100 Q 47.5 40 50 100 Q 52.5 40 55 100 Q 57.5 40 60 100 Q 62.5 40 65 100 Q 67.5 40 70 100 Q 72.5 40 75 100 Q 77.5 40 80 100 Q 82.5 40 85 100 Q 87.5 40 90 100 Q 92.5 40 95 100 Q 97.5 40 100 100 " stroke-width="0"></path>
-					</svg>
-					<svg class="decor visible-xs visible-sm" height="100%" preserveAspectRatio="none" version="1.1" viewBox="0 0 100 100" width="100%" xmlns="http://www.w3.org/2000/svg">
-						<path d="M0 100 Q 5 40 10 100  Q 15 40 20 100  Q 25 40 30 100  Q 35 40 40 100  Q 45 40 50 100  Q 55 40 60 100  Q 65 40 70 100  Q 75 40 80 100  Q 85 40 90 100  Q 95 40 100 100 "></path>
-					</svg>
-					</div>
+                    <svg class="decor" height="100%" preserveAspectRatio="none" version="1.1" viewBox="0 0 100 100" width="100%" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0 L50 100 L100 0 L100 100 L0 100" stroke-width="0"></path>
+                    </svg>
+                </div>
 					<div class="container">
 						<div class="row">
 							<div class="section-header">
@@ -259,5 +244,8 @@
 		<script src="../assets/js/packages.min.js"></script>
 		<script src="../assets/js/theme.min.js"></script>
 		<script src="../customAssets/js/particles.js"></script>
+		<script>
+
+		</script>
 	</body>
 </html>
