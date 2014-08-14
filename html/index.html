@@ -44,8 +44,8 @@
 				z-index:1000;
 			}
 
-			.arrow-fixed {
-
+			.arrow-down {
+				color: rgba(255,255,255,0.5) !important;
 			}
 		</style>
 		<!-- <link type="text/css" href="../customAssets/css/vdstyle.css"> -->
@@ -59,7 +59,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a href="../index.html" class="navbar-brand">
+					<a href="../html/index.html" class="navbar-brand">
 						<img src="../assets/images/logo.png" alt="One of the best themes ever">SCL
 					</a>
 				</div>
@@ -70,7 +70,7 @@
 						<li><a href="services.html">Skills</a></li>
 						<li><a href="projects.html">Projects</a></li>
 						<li><a href="team.html">Team</a></li>
-						<li><a href="contact.html">Contact</a></li>
+						<li><a href="contact.html" class="btn-join">Join Us</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -86,8 +86,8 @@
 						<h1 class="headline hyper inline"></h1>
 						<br><br>
 						<h2 class="regular">Research & Development</h2>
-						<a href="#about">
-							<i class="fa fa-chevron-down" style="font-size:50px;margin-top:40px"></i>
+						<a href="#about" class="arrow-down">
+							<i class="fa fa-chevron-down" style="color: rgba(255,255,255,0.85) !important;font-size:50px;margin-top:40px"></i>
 						</a>
 						<!-- <br>
 						<p class="subtitle-dark">alert("</p>
@@ -100,7 +100,7 @@
 				</div>
 				<div class="background-overlay" style="background-color:rgba(41, 178, 207, 0.7)"></div> -->
 			</section>
-			<section id="about" class="section swatch-darkblue-white">
+			<section id="about" class="section swatch-darkblue-white section-pad">
 				<div class="decor-top">
 					<svg class="decor" height="100%" preserveaspectratio="none" version="1.1" viewbox="0 0 100 100" width="100%" xmlns="http://www.w3.org/2000/svg">
 						<path d="M0 0 C50 100 50 100 100 0  L100 100 0 100" stroke-width="0"></path>
@@ -109,7 +109,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-md-6  text-default">
-							<p><img class="aligncenter size-full wp-image-2322" alt="app" src="../assets/images/design/vector/404.png" width="500" height="600"></p>
+							<p><img class="aligncenter size-full wp-image-2322" alt="app" src="../assets/images/design/vector/404.png" width="400" height="600"></p>
 						</div>
 						<div class="col-md-6  text-default">
 							<h1 class="text-left super light bordered-header">Student Developers.</h1>
@@ -118,17 +118,26 @@
 							<p class="lead text-left">Everything written above is a lie. Except for the punctuation. All of that was completely sincere and from the heart. And now this sentence fills the page to a decent level.</p>
 							<br>
 							<div class="text-left">
-								<a href="about.html" class="btn btn-primary btn-lg  btn-icon-right" target="_self">Learn More About Us 
+								<a href="about.html" class="btn btn-link btn-lg  btn-icon-right" target="_self">Find Out More
 									<span class="hex-alt">
-										<i class="fa fa-chevron-right" data-animation="swing"></i>
+										<i class="fa fa-chevron-right"></i>
 									</span>
 								</a>
+
+								<!-- <a href="about.html" class="btn-white" target="_self">Find Out More <i class="fa fa-chevron-right"></i> </a> -->
+
 							</div>
 						</div>
+						<!-- <center>
+							<a href="#skills" class="arrow-down">
+								<i class="fa fa-chevron-down" style="color: rgba(255,255,255,0.6) !important;font-size:35px;margin-top:40px"></i>
+							</a>
+						</center> -->
 					</div>
+					
 				</div>
 			</section>
-			<section class="section swatch-white-blue">
+			<!-- <section id="skills" class="section swatch-white-blue section-pad">
 				<div class="container">
 					<header class="section-header ">
 						<h1 class="headline super hairline">Our Skills</h1>
@@ -169,15 +178,16 @@
 					</div>
 					<div class="row">
 						<center>
-							<a href="services.html" class="btn btn-lg btn-primary btn-icon-right align-center">
+							<a href="about.html" class="btn btn-lg btn-primary btn-icon-right align-center">
 								I Must Know More
 								<span class="hex-alt hex-alt-big"><i class="fa fa-chevron-right" data-animation="wobble"></i></span>
 							</a>
 						</center>
+						<br><br>
 					</div>
 				</div>
-			</section>
-			<section class="section swatch-blue-white">
+			</section> -->
+			<!-- <section class="section swatch-blue-white">
 				<div class="container">
 					<header class="section-header text-center underline">
 						<h1 class="headline super hairline">Our Latest Project</h1>
@@ -207,7 +217,7 @@
 						</a>
 					</center>
 				</div>
-			</section>
+			</section> -->
 			<footer id="footer" role="contentinfo">
 				<section class="section swatch-white-blue has-top">
 					<div class="decor-top">
@@ -244,8 +254,6 @@
 		<script src="../assets/js/packages.min.js"></script>
 		<script src="../assets/js/theme.min.js"></script>
 		<script src="../customAssets/js/particles.js"></script>
-		<script>
-
-		</script>
+		<script src="../customAssets/js/arrowscroll.js"></script>
 	</body>
 </html>
