@@ -75,7 +75,7 @@
 											<h4><a href="/portfolio-item-big.html">Exerblast</a></h4>
 											<br><br>
 											<a href="http://schimmel.pace.edu/" class="btn btn-xs btn-success btn-semihexleft">View Site</a>
-											<a href="singleproject.html" class="btn btn-xs btn-info btn-semihexright">More Info</a>
+											<a href="javascript:void(0)" class="btn btn-xs btn-info btn-semihexright" id="temp" data-project-title="schimmel" onclick="singleProject(this)">More Info</a>
 										</figcaption>
 									</figure>
 								</div>
@@ -88,7 +88,7 @@
 											<h4><a href="/portfolio-item-big.html">Exerblast</a></h4>
 											<br><br>
 											<a href="http://schimmel.pace.edu/" class="btn btn-xs btn-success btn-semihexleft">View Site</a>
-											<a href="singleproject.html" class="btn btn-xs btn-info btn-semihexright">More Info</a>
+											<a href="javascript:void(0)" class="btn btn-xs btn-info btn-semihexright" id="temp" data-project-title="loma" onclick="singleProject(this)">More Info</a>
 										</figcaption>
 									</figure>
 								</div>
@@ -101,48 +101,7 @@
 											<h4><a href="/portfolio-item-big.html">Exerblast</a></h4>
 											<br><br>
 											<a href="http://schimmel.pace.edu/" class="btn btn-xs btn-success btn-semihexleft">View Site</a>
-											<a href="singleproject.html" class="btn btn-xs btn-info btn-semihexright">More Info</a>
-										</figcaption>
-									</figure>
-								</div>
-								<div class="portfolio-item infinite-item col-md-4 col-sm-4 filter-video filter-image filter-gallery">
-									<figure class="portfolio-figure">
-										<a href="/portfolio-item-big.html">
-											<img width="600" height="518" src="../assets/images/design/vector/img-5-600x518.png" class="img-responsive" alt="some image">
-										</a>
-										<figcaption>
-											<h4><a href="/portfolio-item-big.html">Exerblast</a></h4>
-											<br><br>
-											<a href="http://schimmel.pace.edu/" class="btn btn-xs btn-success btn-semihexleft">View Site</a>
-											<a href="singleproject.html" class="btn btn-xs btn-info btn-semihexright">More Info</a>
-										</figcaption>
-									</figure>
-								</div>
-								<div class="portfolio-item infinite-item col-md-4 col-sm-4 filter-video">
-									<figure class="portfolio-figure">
-										<a href="/portfolio-item-big.html">
-											<a href="http://google.com">
-											<img width="600" height="518" src="../assets/images/design/vector/img-2-600x518.png" class="img-responsive" alt="some image">
-											</a>
-										</a>
-										<figcaption>
-											<h4><a href="/portfolio-item-big.html">Exerblast</a></h4>
-											<br><br>
-											<a href="http://schimmel.pace.edu/" class="btn btn-xs btn-success btn-semihexleft">View Site</a>
-											<a href="singleproject.html" class="btn btn-xs btn-info btn-semihexright">More Info</a>
-										</figcaption>
-									</figure>
-								</div>
-								<div class="portfolio-item infinite-item col-md-4 col-sm-4 filter-image filter-gallery">
-									<figure class="portfolio-figure">
-										<a href="/portfolio-item-big.html">
-											<img width="600" height="518" src="../assets/images/design/vector/img-3-600x518.png" class="img-responsive" alt="some image">
-										</a>
-										<figcaption>
-											<h4><a href="/portfolio-item-big.html">Exerblast</a></h4>
-											<br><br>
-											<a href="http://schimmel.pace.edu/" class="btn btn-xs btn-success btn-semihexleft">View Site</a>
-											<a href="singleproject.html" class="btn btn-xs btn-info btn-semihexright">More Info</a>
+											<a href="javascript:void(0)" class="btn btn-xs btn-info btn-semihexright" id="temp" data-project-title="test" onclick="singleProject(this)">More Info</a>
 										</figcaption>
 									</figure>
 								</div>
@@ -286,5 +245,14 @@
 		</a>
 		<script src="../assets/js/packages.min.js"></script>
 		<script src="../assets/js/theme.min.js"></script>
+		<script type="text/javascript">
+			function context(project){
+				window.location.href = 'singleproject.html#' + project;
+			}
+			function singleProject(project){
+				var projectTitle = project.getAttribute('data-project-title');
+				context(projectTitle);
+			}
+		</script>
 	</body>
 </html>
