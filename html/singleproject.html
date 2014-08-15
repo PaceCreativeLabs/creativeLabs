@@ -62,15 +62,15 @@
 						<h1 class="hairline" id="projectTitle"></h1>
 					</header>
 					<div class="row">
-						<div class="col-md-6 ">
-							<a class="portfolio-figure" id="url">
-								<img alt="some image" id="imgURL">
+						<div class="col-md-6" id="mainImageDiv">
+							<a class="" id="url">
+								<img style="margin-left:20%" height="400px" width="400px" alt="some image" id="imgURL">
 							</a>
 						</div>
-						<div class="col-md-6">
+						<div class="col-md-6" style="max-height:400px; min-height:400px;">
 							<h3 class="bordered-header" id="descriptionTitle"></h3>
 							<p id="description"></p>
-							<a class="portfolio-url overlay" id="urlText"><span class="overlay"></a>
+							<a class="portfolio-url overlay" style="position:absolute; bottom:0; width:80%;" id="urlText"></a>
 						</div>
 					</div>
 					<div class="row" style="margin-top:5%;">
@@ -122,6 +122,7 @@
 			var $urlText = $('#urlText');
 			var $url = $('#url');
 			var $projectList = $('#projectList');
+			var $mainImageDiv = $('#mainImageDiv');
 			function moreInfo(event){
 				var identifier = event.getAttribute('alt');
 				// console.log("== [ Value of this images alt " + identifier + " ] ==");
@@ -132,7 +133,9 @@
 							$descriptionTitle.empty().html(value.descriptionTitle);
 							$description.empty().html(value.description);
 							$urlText.empty().html(value.urlText);
-							$url.attr("href", value.imgUrl);
+							$urlText.attr('href', value.url);
+							$urlText.attr('target', '_blank');
+							$url.attr("href", value.url);
 							$url.attr("title", value.projectTitle);
 							document.getElementById('imgURL').setAttribute('src', value.imgUrl)
 						}
@@ -184,7 +187,9 @@
 							$descriptionTitle.html(value.descriptionTitle);
 							$description.html(value.description);
 							$urlText.html(value.urlText);
-							$url.attr("href", value.imgUrl);
+							$urlText.attr('href', value.url);
+							$urlText.attr('target', '_blank');
+							$url.attr("href", value.url);
 							$url.attr("title", value.projectTitle);
 							document.getElementById('imgURL').setAttribute('src', value.imgUrl);
 						}
