@@ -42,7 +42,7 @@
 }
 
 .section-less-pad-top {
-	padding-top:0px;
+	padding-top:40px;
 }
 
 .section-less-pad-bot {
@@ -123,13 +123,13 @@ body{
 
 .subtitle-dark {
 	color:#253531;
-	font-size:30px;
+	font-size:25px;
 	display:inline;
 }
 
 .subtitle-light {
 	color:#6de6ff;
-	font-size:30px;
+	font-size:25px;
 	display:inline;
 }
 
@@ -189,13 +189,14 @@ body{
 @media (max-width: 767px) {
 	.subtitle-dark {
 		color:#253531;
-		font-size:22px;
+		font-size:20px;
 		display:inline;
+		font-weight: 700;
 	}
 
 	.subtitle-light {
 		color:#6de6ff;
-		font-size:22px;
+		font-size:20px;
 		display:inline;
 	}
 }

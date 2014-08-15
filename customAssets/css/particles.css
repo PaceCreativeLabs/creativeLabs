@@ -1,0 +1,16 @@
+circle{
+	stroke: #000;
+	stroke-opacity: 0;
+	fill:#000000;
+}
+#particles{
+	//position:fixed;
+	left:0px;
+	top:0px;
+	z-index:1000;
+	overflow:visible;
+	//margin:-100px 0px;
+	margin-top:-120px;
+	margin-bottom:-60px;
+	padding:0px 0px;
+}
