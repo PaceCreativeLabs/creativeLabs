@@ -29,7 +29,6 @@
 		<link rel="stylesheet" href="../assets/css/swatch-white-blue.min.css">
 		<link rel="stylesheet" href="../assets/css/swatch-yellow-black.min.css">
 		<link rel="stylesheet" href="../assets/css/fonts.min.css" media="screen">
-		<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
 	</head>
 	<body>
 		<header id="masthead" class="navbar navbar-sticky swatch-blue-white" role="banner">
@@ -58,24 +57,23 @@
 		</header>
 		<div id="content" role="main">
 			<section class="section swatch-blue-white">
-				<div class="container">
+				<div class="container" style="margin-top:-5%;">
 					<header class="section-header text-center underline">
-						<h1 class="headline hyper hairline" id="projectTitle"></h1>
+						<h1 class="hairline" id="projectTitle"></h1>
 					</header>
 					<div class="row">
-						<div class="col-md-6 ">
-							<a class="magnific hover-animate portfolio-figure" id="url">
-								<img alt="some image" id="imgURL">
-								<!-- <i class="fa fa-search-plus"></i> -->
+						<div class="col-md-6" id="mainImageDiv">
+							<a class="" id="url">
+								<img style="margin-left:20%" height="400px" width="400px" alt="some image" id="imgURL">
 							</a>
 						</div>
-						<div class="col-md-6">
-							<h1 class="bordered-header" id="descriptionTitle"></h1>
+						<div class="col-md-6" style="max-height:400px; min-height:400px;">
+							<h3 class="bordered-header" id="descriptionTitle"></h3>
 							<p id="description"></p>
-							<a class="portfolio-url overlay" id="urlText"><span class="overlay"></a>
+							<a class="portfolio-url overlay" style="position:absolute; bottom:0; width:80%;" id="urlText"></a>
 						</div>
 					</div>
-					<div class="row">
+					<div class="row" style="margin-top:5%;">
 						<ul class="list-unstyled row box-list" id="projectList"></ul>
 					</div>
 				</div>
@@ -115,6 +113,7 @@
 		</a>
 		<script src="../assets/js/packages.min.js"></script>
 		<script src="../assets/js/theme.min.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
 		<script type="text/javascript">
 			var $projectTitle = $('#projectTitle');
 			var $imgUrl = $('#imgUrl');
@@ -123,6 +122,7 @@
 			var $urlText = $('#urlText');
 			var $url = $('#url');
 			var $projectList = $('#projectList');
+			var $mainImageDiv = $('#mainImageDiv');
 			function moreInfo(event){
 				var identifier = event.getAttribute('alt');
 				// console.log("== [ Value of this images alt " + identifier + " ] ==");
@@ -133,15 +133,17 @@
 							$descriptionTitle.empty().html(value.descriptionTitle);
 							$description.empty().html(value.description);
 							$urlText.empty().html(value.urlText);
-							$url.attr("href", value.imgUrl);
+							$urlText.attr('href', value.url);
+							$urlText.attr('target', '_blank');
+							$url.attr("href", value.url);
 							$url.attr("title", value.projectTitle);
 							document.getElementById('imgURL').setAttribute('src', value.imgUrl)
 						}
 					});
 				});
 			}
-			function parseURL(url) {
-				var a =  document.createElement('a');
+			function parseURL(url){
+				var a = document.createElement('a');
 				a.href = url;
 				return {
 					source: url,
@@ -153,8 +155,8 @@
 						var ret = {},
 							seg = a.search.replace(/^\?/,'').split('&'),
 							len = seg.length, i = 0, s;
-						for (;i<len;i++) {
-							if (!seg[i]) { continue; }
+						for(;i<len;i++){
+							if(!seg[i]){ continue; }
 							s = seg[i].split('=');
 							ret[s[0]] = s[1];
 						}
@@ -172,22 +174,22 @@
 				$.getJSON('../projectsInfo.json', function(result){
 					$.each(result.projects, function(key, value){
 						$projectList.append('<li class="col-md-2 text-center" data-os-animation="" data-os-animation-delay="">'+
-							'<div class="box-round box-medium">'+
+							'<div class="box-round box-big flat-circle">'+
 								'<div class="box-dummy"></div>'+
-								'<a class="box-inner" href="javascript:void(0)">'+
-									'<img alt="' + value.identifier + '" src="' + value.imgUrl + '" onclick="moreInfo(this)">'+
-								'</a>'+
+								'<span class="box-inner">'+
+									'<img height="400px" width="400px" alt="' + value.identifier + '" src="' + value.imgUrl + '" onclick="moreInfo(this)"/>'+
+								'</span>'+
 							'</div>'+
-							'<h3 class="text-center">'+
-								'<a href="javascript:void(0)">' + value.projectTitle + '</a>'+
-							'</h3>'+
+							'<h3 class="text-center">' + value.projectTitle + '</h3>'+
 						'</li>');
 						if(value.identifier == whichProject.hash){
 							$projectTitle.html(value.projectTitle);
 							$descriptionTitle.html(value.descriptionTitle);
 							$description.html(value.description);
 							$urlText.html(value.urlText);
-							$url.attr("href", value.imgUrl);
+							$urlText.attr('href', value.url);
+							$urlText.attr('target', '_blank');
+							$url.attr("href", value.url);
 							$url.attr("title", value.projectTitle);
 							document.getElementById('imgURL').setAttribute('src', value.imgUrl);
 						}
