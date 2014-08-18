@@ -30,8 +30,6 @@
 	position:relative;
 	top:1px;
 }
-
-
 .btn-white {
 	font-size:30px;
 	border:1px solid white;
@@ -41,7 +39,15 @@
 	color:black !important;
 }
 
+.header-pad {
+	margin-bottom: 40px !important;
+}
+
 .section-less-pad-top {
+	padding-top:-50px;
+}
+
+.section-more-pad-top {
 	padding-top:40px;
 }
 
