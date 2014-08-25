@@ -34,6 +34,11 @@ app.get('/contact', function (req,res) {
    	res.sendfile('contact.html',{'root': './html'});
 });
 
+app.get('*', function(req, res){
+  res.redirect('/');
+  //res.send('404 Bitch', 404);
+});
+
 app.listen(app.get('port'), function() {
   console.log("Node app is running at localhost:" + app.get('port'))
 })
