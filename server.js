@@ -1,21 +1,12 @@
 var express = require('express')
 var app = express();
-var fs = require('fs');
-
-
 
 app.set('port', (process.env.PORT || 5000))
 app.use(express.static(__dirname + '/html'))
 app.use(express.static(__dirname))
 
-
-
-app.get('/', function(request, response) {
-  response.send('Hello World!')
-})
-
 app.get('/home', function (req,res) {
-   	res.sendfile('index.html',{'root': './html'});
+   	res.redirect('/');
 });
 
 app.get('/team', function (req,res) {
@@ -28,6 +19,10 @@ app.get('/skills', function (req,res) {
 
 app.get('/projects', function (req,res) {
    	res.sendfile('projects.html',{'root': './html'});
+});
+
+app.get('/join', function (req,res) {
+   	res.sendfile('join.html',{'root': './html'});
 });
 
 app.get('/contact', function (req,res) {
