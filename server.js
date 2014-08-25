@@ -36,7 +36,6 @@ app.get('/contact', function (req,res) {
 
 app.get('*', function(req, res){
   res.redirect('/');
-  //res.send('404 Bitch', 404);
 });
 
 app.listen(app.get('port'), function() {
