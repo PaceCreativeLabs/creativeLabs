@@ -39,7 +39,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
-					</button>
+					</button><!-- What does this even do? -->
 					<a href="/" class="navbar-brand">
 						<img src="../assets/images/logo.png" alt="One of the best themes ever">SCL
 					</a>
@@ -57,14 +57,9 @@
 		<div id="content" role="main">
 			<section class="section swatch-blue-white">
 				<div class="container" style="margin-top:-5%;">
-					<header class="section-header text-center underline">
-						<h1 class="hairline" id="projectTitle"></h1>
-					</header>
 					<div class="row">
 						<div class="col-md-6" id="mainImageDiv">
-							<a class="" id="url">
-								<img style="margin-left:20%" height="400px" width="400px" alt="some image" id="imgURL">
-							</a>
+							<a class="" id="url"><img style="margin-left:20%" height="400px" width="400px" alt="some image" id="imgURL"></a>
 						</div>
 						<div class="col-md-6" style="max-height:400px; min-height:400px;">
 							<h3 class="bordered-header" id="descriptionTitle"></h3>
@@ -72,18 +67,16 @@
 							<a class="portfolio-url overlay" style="position:absolute; bottom:0; width:80%;" id="urlText"></a>
 						</div>
 					</div>
-					<div class="row" style="margin-top:5%;">
-						<ul class="list-unstyled row box-list" id="projectList"></ul>
-					</div>
+					<div class="row" style="margin-top:5%;"><ul class="list-unstyled row box-list" id="projectList"></ul></div>
 				</div>
 			</section>
 			<footer id="footer" role="contentinfo">
 				<section class="section swatch-darkblue-white has-top">
 					<div class="decor-top">
-                    <svg class="decor" height="100%" preserveAspectRatio="none" version="1.1" viewBox="0 0 100 100" width="100%" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 0 L50 100 L100 0 L100 100 L0 100" stroke-width="0"></path>
-                    </svg>
-                </div>
+						<svg class="decor" height="100%" preserveAspectRatio="none" version="1.1" viewBox="0 0 100 100" width="100%" xmlns="http://www.w3.org/2000/svg">
+							<path d="M0 0 L50 100 L100 0 L100 100 L0 100" stroke-width="0"></path>
+						</svg>
+					</div>
 					<div class="container">
 						<div class="col-md-12 text-center">
 							<header>
@@ -92,27 +85,24 @@
 								</h1>
 							</header>
 							<ul class="list-unstyled inline">
-                                <li><a href="/">Home</a></li>
-                                <li><a href="/team">Team</a></li>
-                                <li><a href="/skills">Skills</a></li>
-                                <li><a href="/projects">Projects</a></li>
+								<li><a href="/">Home</a></li>
+								<li><a href="/team">Team</a></li>
+								<li><a href="/skills">Skills</a></li>
+								<li><a href="/projects">Projects</a></li>
 								<li><a href="/contact">Contact</a></li>
 								<li><a href="/join">Join the Team</a></li>
-                                <li><a href="/apptesting">appTesting</a></li>
-                            </ul>
+								<li><a href="/apptesting">appTesting</a></li>
+							</ul>
 						</div>
 					</div>
 				</section>
 			</footer>
 		</div>
-		<a class="go-top hex-alt" href="javascript:void(0)">
-			<i class="fa fa-angle-up"></i>
-		</a>
+		<a class="go-top hex-alt" href="javascript:void(0)"><i class="fa fa-angle-up"></i></a>
 		<script src="../assets/js/packages.min.js"></script>
 		<script src="../assets/js/theme.min.js"></script>
 		<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
 		<script type="text/javascript">
-			var $projectTitle = $('#projectTitle');
 			var $imgUrl = $('#imgUrl');
 			var $descriptionTitle = $('#descriptionTitle');
 			var $description = $('#description');
@@ -126,7 +116,6 @@
 				$.getJSON('../projectsInfo.json', function(result){
 					$.each(result.projects, function(key, value){
 						if(value.identifier == identifier){
-							$projectTitle.empty().html(value.projectTitle);
 							$descriptionTitle.empty().html(value.descriptionTitle);
 							$description.empty().html(value.description);
 							$urlText.empty().html(value.urlText);
@@ -180,7 +169,6 @@
 							'<h3 class="text-center">' + value.projectTitle + '</h3>'+
 						'</li>');
 						if(value.identifier == whichProject.hash){
-							$projectTitle.html(value.projectTitle);
 							$descriptionTitle.html(value.descriptionTitle);
 							$description.html(value.description);
 							$urlText.html(value.urlText);
