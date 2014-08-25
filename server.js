@@ -1,9 +1,9 @@
-var express = require('express')
+var express = require('express');
 var app = express();
 
-app.set('port', (process.env.PORT || 5000))
-app.use(express.static(__dirname + '/html'))
-app.use(express.static(__dirname))
+app.set('port', (process.env.PORT || 5000));
+app.use(express.static(__dirname + '/html'));
+app.use(express.static(__dirname));
 
 app.get('/home', function (req,res) {
    	res.redirect('/');
@@ -39,5 +39,5 @@ app.get('*', function(req, res){
 });
 
 app.listen(app.get('port'), function() {
-  console.log("Node app is running at localhost:" + app.get('port'))
-})
+  console.log("Node app is running at localhost:" + app.get('port'));
+});
