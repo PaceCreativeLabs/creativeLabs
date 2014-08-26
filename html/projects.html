@@ -139,7 +139,7 @@
 						<h1 class="headline super hairline">Clients</h1>
 					</header>
 					<div class="row">
-						<div id="slider-flex2" class="flexslider os-animation" data-flex-speed="7000" data-flex-itemwidth="235pxpx" data-flex-animation="slide" data-flex-controls="hide" data-flex-directions="show" data-flex-controlsalign="center">
+						<div id="slider-flex2" class="flexslider os-animation" data-flex-speed="7000" data-flex-itemwidth="235pxpx" data-flex-animation="slide" data-flex-controls="hide" data-flex-directions="show" data-flex-controlsalign="center"data-flex-captionhorizontal=""data-flex-captionvertical=""data-flex-controlsposition=""data-flex-directions-type="">
 							<ul class="slides">
 								<li>
 									<figure>
@@ -213,6 +213,14 @@
 		<a class="go-top hex-alt" href="javascript:void(0)"><i class="fa fa-angle-up"></i></a>
 		<script src="../assets/js/packages.min.js"></script>
 		<script src="../assets/js/theme.min.js"></script>
-		<script type="text/javascript">function context(project){window.location.href='singleproject.html#'+project;}function singleProject(project){var projectTitle=project.getAttribute('data-project-title');context(projectTitle);}</script>
+		<script type="text/javascript">
+			function context(project){
+				window.location.href = 'singleproject.html#'+project;
+			}
+			function singleProject(project){
+				var projectTitle=project.getAttribute('data-project-title');
+				context(projectTitle);
+			}
+		</script>
 	</body>
 </html>
