@@ -3,7 +3,6 @@
 		"schimmel":{
 			"projectTitle":"Schimmel Theater",
 			"imgUrl":"../customAssets/images/schimmel.png",
-			"descriptionTitle":"Our Prized Possession!",
 			"description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta eu turpis id varius. Morbi venenatis pretium ipsum, eget vestibulum massa. Nulla vel lacus a felis dignissim fermentum. Suspendisse ullamcorper nulla massa, et mollis libero scelerisque a. Phasellus nec scelerisque libero, non vehicula mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget tincidunt diam. Fusce mollis elementum aliquam. Quisque non lobortis erat, dapibus lobortis massa. Praesent sed justo fermentum, egestas nulla eget, luctus nisl. Vestibulum massa orci, tincidunt vitae nulla non, lobortis semper enim.",
 			"urlText":"<span class='overlay'>URL</span>http://www.schimmel.pace.edu",
 			"url":"http://schimmel.pace.edu",
@@ -12,7 +11,6 @@
 		"loma":{
 			"projectTitle":"LOMA School",
 			"imgUrl":"../customAssets/images/loma.png",
-			"descriptionTitle":"A Work in Progress!",
 			"description":"In a professional context it often happens that private or corporate clients corder a publication to be made and presented with the actual content still not being ready. Think of a news blog that's filled with content hourly on the day of going live. However, reviewers tend to be distracted by comprehensible content, say, a random text copied from a newspaper or the internet. The are likely to focus on the text, disregarding the layout and its elements. Besides, random text risks to be unintendedly humorous or offensive, an unacceptable risk in corporate environments. Lorem ipsum and its many variants have been employed since the early 1960ies, and quite likely since the sixteenth century.",
 			"urlText":"<span class='overlay'>URL</span>http://www.lowermanhattanmarketing.com/",
 			"url":"http://www.lowermanhattanmarketing.com/",

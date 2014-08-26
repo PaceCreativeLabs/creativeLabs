@@ -39,14 +39,14 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
-					</button>
+					</button><!-- What does this even do? -->
 					<a href="/" class="navbar-brand">
 						<img src="../assets/images/logo.png" alt="One of the best themes ever">SCL
 					</a>
 				</div>
 				<nav class="collapse navbar-collapse main-navbar" role="navigation">
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="/team">Team</a></li>
+						<li><a href="/team#current">Team</a></li>
 						<li><a href="/skills">Skills</a></li>
 						<li><a href="/projects">Projects</a></li>
 						<li><a href="/contact">Contact</a></li>
@@ -62,28 +62,24 @@
 					</header>
 					<div class="row">
 						<div class="col-md-6" id="mainImageDiv">
-							<a class="" id="url">
-								<img style="margin-left:20%" height="400px" width="400px" alt="some image" id="imgURL">
-							</a>
+							<a class="" id="url"><img style="margin-left:20%" height="400px" width="400px" alt="some image" id="imgURL"></a>
 						</div>
 						<div class="col-md-6" style="max-height:400px; min-height:400px;">
-							<h3 class="bordered-header" id="descriptionTitle"></h3>
+							<h3 class="bordered-header" id="projectTitle"></h3>
 							<p id="description"></p>
 							<a class="portfolio-url overlay" style="position:absolute; bottom:0; width:80%;" id="urlText"></a>
 						</div>
 					</div>
-					<div class="row" style="margin-top:5%;">
-						<ul class="list-unstyled row box-list" id="projectList"></ul>
-					</div>
+					<div class="row" style="margin-top:5%;"><ul class="list-unstyled row box-list" id="projectList"></ul></div>
 				</div>
 			</section>
 			<footer id="footer" role="contentinfo">
 				<section class="section swatch-darkblue-white has-top">
 					<div class="decor-top">
-                    <svg class="decor" height="100%" preserveAspectRatio="none" version="1.1" viewBox="0 0 100 100" width="100%" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 0 L50 100 L100 0 L100 100 L0 100" stroke-width="0"></path>
-                    </svg>
-                </div>
+						<svg class="decor" height="100%" preserveAspectRatio="none" version="1.1" viewBox="0 0 100 100" width="100%" xmlns="http://www.w3.org/2000/svg">
+							<path d="M0 0 L50 100 L100 0 L100 100 L0 100" stroke-width="0"></path>
+						</svg>
+					</div>
 					<div class="container">
 						<div class="col-md-12 text-center">
 							<header>
@@ -92,110 +88,23 @@
 								</h1>
 							</header>
 							<ul class="list-unstyled inline">
-                                <li><a href="/">Home</a></li>
-                                <li><a href="/team">Team</a></li>
-                                <li><a href="/skills">Skills</a></li>
-                                <li><a href="/projects">Projects</a></li>
+								<li><a href="/">Home</a></li>
+								<li><a href="/team#current">Team</a></li>
+								<li><a href="/skills">Skills</a></li>
+								<li><a href="/projects">Projects</a></li>
 								<li><a href="/contact">Contact</a></li>
 								<li><a href="/join">Join the Team</a></li>
-                                <li><a href="/apptesting">appTesting</a></li>
-                            </ul>
+								<li><a href="/apptesting">appTesting</a></li>
+							</ul>
 						</div>
 					</div>
 				</section>
 			</footer>
 		</div>
-		<a class="go-top hex-alt" href="javascript:void(0)">
-			<i class="fa fa-angle-up"></i>
-		</a>
+		<a class="go-top hex-alt" href="javascript:void(0)"><i class="fa fa-angle-up"></i></a>
 		<script src="../assets/js/packages.min.js"></script>
 		<script src="../assets/js/theme.min.js"></script>
 		<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
-		<script type="text/javascript">
-			var $projectTitle = $('#projectTitle');
-			var $imgUrl = $('#imgUrl');
-			var $descriptionTitle = $('#descriptionTitle');
-			var $description = $('#description');
-			var $urlText = $('#urlText');
-			var $url = $('#url');
-			var $projectList = $('#projectList');
-			var $mainImageDiv = $('#mainImageDiv');
-			function moreInfo(event){
-				var identifier = event.getAttribute('alt');
-				// console.log("== [ Value of this images alt " + identifier + " ] ==");
-				$.getJSON('../projectsInfo.json', function(result){
-					$.each(result.projects, function(key, value){
-						if(value.identifier == identifier){
-							$projectTitle.empty().html(value.projectTitle);
-							$descriptionTitle.empty().html(value.descriptionTitle);
-							$description.empty().html(value.description);
-							$urlText.empty().html(value.urlText);
-							$urlText.attr('href', value.url);
-							$urlText.attr('target', '_blank');
-							$url.attr("href", value.url);
-							$url.attr("title", value.projectTitle);
-							document.getElementById('imgURL').setAttribute('src', value.imgUrl)
-						}
-					});
-				});
-			}
-			function parseURL(url){
-				var a = document.createElement('a');
-				a.href = url;
-				return {
-					source: url,
-					protocol: a.protocol.replace(':',''),
-					host: a.hostname,
-					port: a.port,
-					query: a.search,
-					params: (function(){
-						var ret = {},
-							seg = a.search.replace(/^\?/,'').split('&'),
-							len = seg.length, i = 0, s;
-						for(;i<len;i++){
-							if(!seg[i]){ continue; }
-							s = seg[i].split('=');
-							ret[s[0]] = s[1];
-						}
-						return ret;
-					})(),
-					file: (a.pathname.match(/\/([^\/?#]+)$/i) || [,''])[1],
-					hash: a.hash.replace('#',''),
-					path: a.pathname.replace(/^([^\/])/,'/$1'),
-					relative: (a.href.match(/tps?:\/\/[^\/]+(.+)/) || [,''])[1],
-					segments: a.pathname.replace(/^\//,'').split('/')
-				};
-			}
-			whichProject = parseURL(window.location.href);
-			$(document).ready(function(){
-				$.getJSON('../projectsInfo.json', function(result){
-					$.each(result.projects, function(key, value){
-						$projectList.append('<li class="col-md-2 text-center" data-os-animation="" data-os-animation-delay="">'+
-							'<div class="box-round box-big flat-circle">'+
-								'<div class="box-dummy"></div>'+
-								'<span class="box-inner">'+
-									'<img height="400px" width="400px" alt="' + value.identifier + '" src="' + value.imgUrl + '" onclick="moreInfo(this)"/>'+
-								'</span>'+
-							'</div>'+
-							'<h3 class="text-center">' + value.projectTitle + '</h3>'+
-						'</li>');
-						if(value.identifier == whichProject.hash){
-							$projectTitle.html(value.projectTitle);
-							$descriptionTitle.html(value.descriptionTitle);
-							$description.html(value.description);
-							$urlText.html(value.urlText);
-							$urlText.attr('href', value.url);
-							$urlText.attr('target', '_blank');
-							$url.attr("href", value.url);
-							$url.attr("title", value.projectTitle);
-							document.getElementById('imgURL').setAttribute('src', value.imgUrl);
-						}
-					});
-				}).fail(function(jqxhr, textStatus, error){
-					var err = textStatus + ', ' + error;
-					console.log("== [ Request Failed: " + err + " ] ==");
-				});
-			});
-		</script>
+		<script type="text/javascript">var $imgUrl=$('#imgUrl');var $projectTitle=$('#projectTitle');var $description=$('#description');var $urlText=$('#urlText');var $url=$('#url');var $projectList=$('#projectList');var $mainImageDiv=$('#mainImageDiv');function moreInfo(event){var identifier=event.getAttribute('data-identifier');$.getJSON('../projectsInfo.json',function(result){$.each(result.projects,function(key,value){if(value.identifier==identifier){$projectTitle.empty().html(value.projectTitle);$description.empty().html(value.description);$urlText.empty().html(value.urlText);$urlText.attr('href',value.url);$urlText.attr('target','_blank');$url.attr("href", value.url);$url.attr("title", value.projectTitle);document.getElementById('imgURL').setAttribute('src', value.imgUrl)}});});}function parseURL(url){var a=document.createElement('a');a.href=url;return{hash:a.hash.replace('#','')};}whichProject=parseURL(window.location.href);$(document).ready(function(){$.getJSON('../projectsInfo.json',function(result){$.each(result.projects,function(key,value){$projectList.append('<li class="col-md-2 text-center"data-os-animation=""data-os-animation-delay=""><div class="box-round box-big flat-circle"><div class="box-dummy"></div><span class="box-inner"><img height="400px"width="400px"data-identifier="'+value.identifier+'"src="'+value.imgUrl+'"onclick="moreInfo(this)"/></span></div><h3 class="text-center">'+value.projectTitle+'</h3></li>');if(value.identifier==whichProject.hash){$projectTitle.html(value.projectTitle);$description.html(value.description);$urlText.html(value.urlText);$urlText.attr('href', value.url);$urlText.attr('target','_blank');$url.attr("href",value.url);$url.attr("title",value.projectTitle);document.getElementById('imgURL').setAttribute('src',value.imgUrl);}});}).fail(function(jqxhr,textStatus,error){var err=textStatus+', '+error;console.log("== [ Request Failed: " + err + " ] ==");});});</script>
 	</body>
 </html>
