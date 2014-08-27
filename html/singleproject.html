@@ -61,8 +61,8 @@
 						<h1 class="hairline" id="projectTitle"></h1>
 					</header>
 					<div class="row">
-						<div class="col-md-6" id="mainImageDiv">
-							<a class="" id="url"><img style="margin-left:20%" height="400px" width="400px" alt="some image" id="imgURL"></a>
+						<div class="col-md-5" id="mainImageDiv">
+							<a class="" id="url"><img height="400px" width="400px" alt="some image" id="imgURL"></a>
 						</div>
 						<div class="col-md-6" style="max-height:400px; min-height:400px;">
 							<h3 class="bordered-header" id="projectTitle"></h3>
@@ -71,71 +71,10 @@
 						</div>
 					</div>
 					<div class="row" style="margin-top:5%;">
-						<ul class="list-unstyled row box-list" id="projectList"></ul>
-						<!-- <div id="slider-flex2" class="flexslider os-animation" data-flex-speed="7000" data-flex-itemwidth="235px" data-flex-animation="slide" data-flex-controls="hide" data-flex-direcitons="show" data-flex-controlsalign="center"data-flex-captionhorizontal=""data-flex-captionvertical=""data-flex-controlsposition=""data-flex-directions-type="">
-							<ul id="projectList" class="slides">
+						<div id="slider-flex2" class="flexslider os-animation" data-flex-speed="7000" data-flex-itemwidth="235pxpx" data-flex-animation="slide" data-flex-controls="hide" data-flex-directions="show" data-flex-controlsalign="center"data-flex-captionhorizontal=""data-flex-captionvertical=""data-flex-controlsposition=""data-flex-directions-type="">
+							<ul class="slides" id="projectList">
 								
 							</ul>
-						</div> -->
-					</div>
-				</div>
-			</section>
-			<section class="section swatch-white-blue has-top">
-				<div class="container">
-					<header class="section-header underline">
-						<h1 class="headline super hairline">Clients</h1>
-					</header>
-					<div class="row">
-						<div class="col-md-10 col-md-offset-1">
-							<div id="slider-flex2" class="flexslider os-animation" data-flex-speed="7000" data-flex-itemwidth="235pxpx" data-flex-animation="slide" data-flex-controls="hide" data-flex-directions="show" data-flex-controlsalign="center"data-flex-captionhorizontal=""data-flex-captionvertical=""data-flex-controlsposition=""data-flex-directions-type="">
-								<ul class="slides">
-									<li>
-										<figure>
-											<img src="../customAssets/images/loma.png"alt="">
-										</figure>
-									</li>
-									<li>
-										<figure>
-											<img src="../customAssets/images/loma.png"alt="">
-										</figure>
-									</li>
-									<li>
-										<figure>
-											<img src="../customAssets/images/loma.png"alt="">
-										</figure>
-									</li>
-									<li>
-										<figure>
-											<img src="../customAssets/images/loma.png"alt="">
-										</figure>
-									</li>
-									<li>
-										<figure>
-											<img src="../customAssets/images/loma.png"alt="">
-										</figure>
-									</li>
-									<li>
-										<figure>
-											<img src="../customAssets/images/loma.png"alt="">
-										</figure>
-									</li>
-									<li>
-										<figure>
-											<img src="../customAssets/images/loma.png"alt="">
-										</figure>
-									</li>
-									<li>
-										<figure>
-											<img src="../customAssets/images/loma.png"alt="">
-										</figure>
-									</li>
-									<li>
-										<figure>
-											<img src="../customAssets/images/loma.png"alt="">
-										</figure>
-									</li>
-								</ul>
-							</div>
 						</div>
 					</div>
 				</div>
@@ -206,8 +145,7 @@
 			$(document).ready(function(){
 				$.getJSON('../projectsInfo.json', function(result){
 					$.each(result.projects,function(key,value){
-						// $projectList.append('<li><figure><img src="' + value.imgUrl + '"data-identifier="' + value.identifier + '"data-toggle="tooltip"onclick="moreInfo(this)"><figcaption><h3></h3><p></p></figcaption></figure></li>');
-						$projectList.append('<li class="col-md-2 text-center"data-os-animation=""data-os-animation-delay=""><div class="box-round box-big flat-circle"><div class=""></div><span class=""><img height="400px"width="400px"data-identifier="'+value.identifier+'"src="'+value.imgUrl+'"onclick="moreInfo(this)"/></span></div><h3 class="text-center">'+value.projectTitle+'</h3></li>');
+						$projectList.append('<li><figure><img src="' + value.imgUrl + '"data-identifier="' + value.identifier + '"data-toggle="tooltip"onclick="moreInfo(this)"></figure><h3 class="header">' + value.projectTitle + '</li>');
 						if(value.identifier==whichProject.hash){
 							$projectTitle.html(value.projectTitle);
 							$description.html(value.description);
