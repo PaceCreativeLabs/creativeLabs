@@ -147,7 +147,7 @@
 				$.getJSON('../projectsInfo.json', function(result){
 					$.each(result.projects,function(key,value){
 						// $projectList.append('<li><figure><img src="' + value.imgUrl + '"data-identifier="' + value.identifier + '"data-toggle="tooltip"onclick="moreInfo(this)"><figcaption><h3></h3><p></p></figcaption></figure></li>');
-						$projectList.append('<li class="col-md-2 text-center"data-os-animation=""data-os-animation-delay=""><div class="box-round box-big flat-circle"><div class="box-dummy"></div><span class="box-inner"><img height="400px"width="400px"data-identifier="'+value.identifier+'"src="'+value.imgUrl+'"onclick="moreInfo(this)"/></span></div><h3 class="text-center">'+value.projectTitle+'</h3></li>');
+						$projectList.append('<li class="col-md-2 text-center"data-os-animation=""data-os-animation-delay=""><div class="box-round box-big flat-circle"><div class=""></div><span class=""><img height="400px"width="400px"data-identifier="'+value.identifier+'"src="'+value.imgUrl+'"onclick="moreInfo(this)"/></span></div><h3 class="text-center">'+value.projectTitle+'</h3></li>');
 						if(value.identifier==whichProject.hash){
 							$projectTitle.html(value.projectTitle);
 							$description.html(value.description);
