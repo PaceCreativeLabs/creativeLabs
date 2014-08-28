@@ -68,7 +68,7 @@
 							<p id="description"></p>
 							<a class="portfolio-url overlay hidden-xs" id="urlText"></a>
 							<center>
-								<a class="btn btn-lg btn-link visible-xs-block" style="width:100%;margin-bottom:100px" href="/team#current">Visit Site<i class="fa fa-chevron-right" style="padding-left:25px;color:inherit !important"></i></a>
+								<a class="btn btn-lg btn-link visible-xs-block" target="_blank" id="visitSite" style="width:100%;margin-bottom:100px">Visit Site<i class="fa fa-chevron-right" style="padding-left:25px;color:inherit !important"></i></a>
 							</center>
 						</div>
 						</div>
@@ -125,6 +125,7 @@
 			var $url = $('#url');
 			var $projectList = $('#projectList');
 			var $mainImageDiv = $('#mainImageDiv');
+			var $visitSite = $('#visitSite');
 			function moreInfo(event){
 				var identifier = event.getAttribute('data-identifier');
 				$.getJSON('../projectsInfo.json', function(result){
@@ -136,6 +137,7 @@
 							$urlText.attr('href',value.url);
 							$urlText.attr('target','_blank');
 							$url.attr("href", value.url);
+							$visitSite.attr("href",value.url);
 							$url.attr("title", value.projectTitle);
 							document.getElementById('imgURL').setAttribute('src', value.imgUrl);
 						}
@@ -160,6 +162,7 @@
 							$urlText.attr('href', value.url);
 							$urlText.attr('target','_blank');
 							$url.attr("href",value.url);
+							$visitSite.attr("href",value.url);
 							$url.attr("title",value.projectTitle);
 							document.getElementById('imgURL').setAttribute('src',value.imgUrl);
 						}
