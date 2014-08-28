@@ -39,6 +39,14 @@
 	color:black !important;
 }
 
+.blue{
+	color:#29b2cf !important;
+}
+
+.tiny-pad-bot{
+	margin-bottom:25px;
+}
+
 .header-pad {
 	margin-bottom: 40px !important;
 }
