@@ -152,7 +152,7 @@
 			$(document).ready(function(){
 				$.getJSON('../projectsInfo.json', function(result){
 					$.each(result.projects,function(key,value){
-						$projectList.append('<li><figure><img src="' + value.imgUrl + '"data-identifier="' + value.identifier + '"data-toggle="tooltip"onclick="moreInfo(this)"></figure><h3 class="header">' + value.projectTitle + '</li>');
+						$projectList.append('<li><figure><a href="javascript:void(0)"><img src="' + value.imgUrl + '"data-identifier="' + value.identifier + '"data-toggle="tooltip"onclick="moreInfo(this)"></a></figure><h3 class="header">' + value.projectTitle + '</li>');
 						if(value.identifier==whichProject.hash){
 							$projectTitle.html(value.projectTitle);
 							$description.html(value.description);
