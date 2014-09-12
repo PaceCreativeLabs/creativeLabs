@@ -34,7 +34,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
-					</button><!-- What does this even do? -->
+					</button>
 					<a href="/" class="navbar-brand">
 						<img src="../customAssets/images/logo.png" style="width:50px" alt="One of the best themes ever"> SCL </img>
 					</a>
@@ -107,6 +107,7 @@
 		<script src="../assets/js/packages.min.js"></script>
 		<script src="../assets/js/theme.min.js"></script>
 		<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+		<script src="../customAssets/js/removeFrame.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function(){
 				$.getJSON('../projectsInfo.json', function(result){
@@ -124,7 +125,8 @@
 							document.getElementById('imgURL').setAttribute('src',value.imgUrl);
 						}
 					});
-				}).fail(function(jqxhr,textStatus,error){var err=textStatus+', '+error;
+				}).fail(function(jqxhr,textStatus,error){
+					var err = textStatus + ', ' + error;
 					console.log("== [ Request Failed: " + err + " ] ==");
 				});
 			});
@@ -153,7 +155,7 @@
 						}
 					});
 				});
-				jQuery('html, body').animate({scrollTop: 0}, 500);
+				jQuery('html, body').animate({scrollTop: 0}, 1000);
 			}
 			function parseURL(url){
 				console.log(url);
