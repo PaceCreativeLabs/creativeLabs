@@ -103,6 +103,20 @@
 		<script src="../assets/js/theme.min.js"></script>
 		<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
 		<script type="text/javascript">
+			var $imgUrl = $('#imgUrl');
+			var $projectTitle = $('#projectTitle');
+			var $description = $('#description');
+			var $urlText = $('#urlText');
+			var $url = $('#url');
+			var $projectList = $('#projectList');
+			var $mainImageDiv = $('#mainImageDiv');
+			var $visitSite = $('#visitSite');
+			function parseURL(url){
+				var a=document.createElement('a');
+				a.href=url;
+				return{hash:a.hash.replace('#','')};
+			}
+			whichProject = parseURL(window.location.href);
 			$(document).ready(function(){
 				$.getJSON('../projectsInfo.json', function(result){
 					$.each(result.projects,function(key,value){
@@ -124,14 +138,6 @@
 					console.log("== [ Request Failed: " + err + " ] ==");
 				});
 			});
-			var $imgUrl = $('#imgUrl');
-			var $projectTitle = $('#projectTitle');
-			var $description = $('#description');
-			var $urlText = $('#urlText');
-			var $url = $('#url');
-			var $projectList = $('#projectList');
-			var $mainImageDiv = $('#mainImageDiv');
-			var $visitSite = $('#visitSite');
 			function moreInfo(event){
 				var identifier = event.getAttribute('data-identifier');
 				$.getJSON('../projectsInfo.json', function(result){
@@ -139,11 +145,11 @@
 						if(value.identifier == identifier){
 							$projectTitle.empty().html(value.projectTitle);
 							$description.empty().html(value.description);
-							$urlText.empty().html(value.urlText);
-							$urlText.attr('href',value.url);
+							$urlText.empty().html( value.urlText);
+							$urlText.attr('href', value.url);
 							$urlText.attr('target','_blank');
 							$url.attr("href", value.url);
-							$visitSite.attr("href",value.url);
+							$visitSite.attr("href", value.url);
 							$url.attr("title", value.projectTitle);
 							document.getElementById('imgURL').setAttribute('src', value.imgUrl);
 						}
@@ -151,13 +157,6 @@
 				});
 				jQuery('html, body').animate({scrollTop: 0}, 1000);
 			}
-			function parseURL(url){
-				console.log(url);
-				var a=document.createElement('a');
-				a.href=url;
-				return{hash:a.hash.replace('#','')};
-			}
-			whichProject = parseURL(window.location.href);
 		</script>
 	</body>
 </html>
