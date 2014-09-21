@@ -6,27 +6,27 @@ app.use(express.static(__dirname + '/html'));
 app.use(express.static(__dirname));
 
 app.get('/home', function (req,res) {
-   	res.redirect('/');
+	res.redirect('/');
 });
 
 app.get('/team', function (req,res) {
-   	res.sendfile('aboutandteam.html',{'root': './html'});
+	res.sendfile('aboutandteam.html',{'root': './html'});
 });
 
 app.get('/skills', function (req,res) {
-   	res.sendfile('services.html',{'root': './html'});
+	res.sendfile('services.html',{'root': './html'});
 });
 
 app.get('/projects', function (req,res) {
-   	res.sendfile('projects.html',{'root': './html'});
+	res.sendfile('projects.html',{'root': './html'});
 });
 
 app.get('/join', function (req,res) {
-   	res.sendfile('join.html',{'root': './html'});
+	res.sendfile('join.html',{'root': './html'});
 });
 
 app.get('/contact', function (req,res) {
-   	res.sendfile('contact.html',{'root': './html'});
+	res.sendfile('contact.html',{'root': './html'});
 });
 
 app.get('/project/loma', function (req,res) {
