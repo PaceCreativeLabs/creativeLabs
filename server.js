@@ -29,10 +29,9 @@ app.get('/contact', function (req,res) {
 	res.sendfile('contact.html',{'root': './html'});
 });
 
-app.get('/project/loma', function (req,res) {
-	res.sendfile('singleproject.html#loma',{'root': './html'});
+app.get('/project', function (req,res) {
+	res.sendfile('singleproject.html',{'root': './html'});
 });
-
 
 app.get('*', function(req, res){
   res.redirect('/');

@@ -5,14 +5,8 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>SCL | Join the Team</title>
-		<link rel="icon" type="image/x-icon" href="../assets/images/favicons/favicon.ico" />
-		<link rel="icon" type="image/png" href="../assets/images/favicons/favicon.png" />
-		<!-- For iPhone 4 Retina display: -->
-		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/images/favicons/apple-touch-icon-114x114-precomposed.png">
-		<!-- For iPad: -->
-		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/images/favicons/apple-touch-icon-72x72-precomposed.png">
-		<!-- For iPhone: -->
-		<link rel="apple-touch-icon-precomposed" href="../assets/images/favicons/apple-touch-icon-60x60-precomposed.png">
+		<link rel="icon" type="image/x-icon" href="../customAssets/images/favicons/favicon.ico" />
+		<link rel="icon" type="image/png" href="../customAssets/images/favicons/favicon.png" />
 		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,400italic' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
 		<link rel="stylesheet" href="../assets/css/theme.css">
@@ -23,14 +17,13 @@
 		<link rel="stylesheet" href="../assets/css/swatch-black-yellow.min.css">
 		<link rel="stylesheet" href="../assets/css/swatch-blue-white.min.css">
 		<link rel="stylesheet" href="../assets/css/swatch-green-white.min.css">
-		<link rel="stylesheet" href="../assets/css/swatch-red-white.min.css">
 		<link rel="stylesheet" href="../assets/css/swatch-white-black.min.css">
 		<link rel="stylesheet" href="../assets/css/swatch-white-blue.min.css">
 		<link rel="stylesheet" href="../assets/css/swatch-white-green.min.css">
-		<link rel="stylesheet" href="../assets/css/swatch-white-red.min.css">
 		<link rel="stylesheet" href="../assets/css/swatch-yellow-black.min.css">
 		<link rel="stylesheet" href="../assets/css/fonts.min.css" media="screen">
 		<link rel="stylesheet" href="../customAssets/css/swatch-darkblue-white.css">
+		<link rel="stylesheet" href="../customAssets/css/general.css">
 	</head>
 	<body>
 		<header id="masthead" class="navbar navbar-sticky swatch-blue-white" role="banner">
@@ -42,14 +35,14 @@
 						<span class="icon-bar"></span>
 					</button>
 					<a href="/" class="navbar-brand">
-						<img src="../assets/images/logo.png" alt="One of the best themes ever">SCL
+						<img src="../customAssets/images/logo.png" style="width:50px" alt="One of the best themes ever"> SCL </img>
 					</a>
 				</div>
 				<nav class="collapse navbar-collapse main-navbar" role="navigation">
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="/team">Team</a></li>
-						<li><a href="/skills">Skills</a></li>
 						<li><a href="/projects">Projects</a></li>
+						<li><a href="/skills">Skills</a></li>
+						<li><a href="/team#current">Team</a></li>
 						<li><a href="/contact">Contact</a></li>
 					</ul>
 				</nav>
@@ -60,9 +53,9 @@
 				<div class="background-media" style="background-image:url('../assets/images/design/section-bg/bg-2.jpg'); background-repeat: ; background-size: ; background-attachment: ; background-position: ; background-size: cover;" data-start="background-position: 50% 0px" data-top-bottom="background-position: 50% -60px"></div>
 				<div class="background-overlay" style="background-color:rgba(41,178,207,0.8)"></div>
 				<div class="container">
-					<header class="section-header underline">
+					<header class="section-header no-underline">
 						<h1 class="headline hyper light">Awesome!</h1>
-						<h1 class="headline super light"> So glad you're interested, here's what you need to know.</h1>
+						<h1 class="headline big light"> So glad you're interested, here's what you need to know.</h1>
 					</header>
 				</div>
 			</section>
@@ -77,9 +70,12 @@
 					</svg>
 				</div>
 				<div class="container">
-					<header class="section-header underline">
-						<h1 class="headline super hairline">Some tools you will be using</h1>
+					<header class="section-header no-underline">
+						<h1 class="headline super hairline">Tools</h1>
+						<p class="">Some tools you will be using</p> 
 					</header>
+					</header>
+					<br><br><br>
 					<div class="row">
 						<ul class="list-unstyled row box-list">
 							<li class="col-md-4">
@@ -105,7 +101,7 @@
 							<li class="col-md-4">
 								<div class="box-hex flat-shadow box-huge">
 									<div class="box-dummy"></div>
-									<a class="box-inner " href="" target="_blank">
+									<a class="box-inner " href="http://www.ee.surrey.ac.uk/Teaching/Unix/" target="_blank" target="_blank">
 										<i class="fa fa-terminal" data-animation="tada"></i>
 									</a>
 								</div>
@@ -123,10 +119,11 @@
 					</svg>
 				</div>
 				<div class="container">
-					<header class="section-header underline">
-						<h1 class="headline super hairline">I Love a Good Party, but...</h1>
+					<header class="section-header no-underline">
+						<h1 class="headline super hairline">But I Want To Party!</h1>
 						<p class="">You have to know how to manage your time</p> 
 					</header>
+					<br>
 					<div class="row">
 						<div class="col-md-3  text-center">
 							<div class="chart easyPieChart" data-track-color="#e2d9d8" data-bar-color="#74ECF2" data-line-width="20" data-percent="75" data-size="200">
@@ -187,7 +184,6 @@
                                 <li><a href="/projects">Projects</a></li>
 								<li><a href="/contact">Contact</a></li>
 								<li><a href="/join">Join the Team</a></li>
-                                <li><a href="/apptesting">appTesting</a></li>
                             </ul>
 						</div>
 					</div>
