@@ -9,5 +9,4 @@ node_modules/*
 !assets/css/swatch-white-blue.css
 !assets/css/swatch-blue-white.min.css
 !assets/css/swatch-white-blue.min.css
-!assets/js/map.min.js
-ngrok.exe
+!assets/js/map.min
