@@ -11,17 +11,7 @@
 		<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
 		<link rel="stylesheet" href="../assets/css/theme.css">
 		<link rel="stylesheet" href="../assets/css/color-defaults.min.css">
-		<link rel="stylesheet" href="../assets/css/swatch-beige-black.min.css">
-		<link rel="stylesheet" href="../assets/css/swatch-black-beige.min.css">
-		<link rel="stylesheet" href="../assets/css/swatch-black-white.min.css">
-		<link rel="stylesheet" href="../assets/css/swatch-black-yellow.min.css">
-		<link rel="stylesheet" href="../assets/css/swatch-green-white.min.css">
-		<link rel="stylesheet" href="../assets/css/swatch-blue-white.css">
-		<link rel="stylesheet" href="../assets/css/swatch-white-black.min.css">
-		<link rel="stylesheet" href="../assets/css/swatch-white-blue.css">
-		<link rel="stylesheet" href="../assets/css/swatch-white-green.min.css">
-		<link rel="stylesheet" href="../assets/css/swatch-white-blue.min.css">
-		<link rel="stylesheet" href="../assets/css/swatch-yellow-black.min.css">
+		<link rel="stylesheet" href="../assets/css/swatch-blue-white.min.css">
 		<link rel="stylesheet" href="../assets/css/fonts.min.css" media="screen">
 		<link rel="stylesheet" href="../customAssets/css/swatch-darkblue-white.css">
 		<link rel="stylesheet" href="../customAssets/css/general.css">
@@ -41,9 +31,9 @@
 				</div>
 				<nav class="collapse navbar-collapse main-navbar" role="navigation">
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="/team#current">Team</a></li>
-						<li><a href="/skills">Skills</a></li>
 						<li><a href="/projects">Projects</a></li>
+						<li><a href="/skills">Skills</a></li>
+						<li><a href="/team#current">Team</a></li>
 						<li><a href="/contact">Contact</a></li>
 					</ul>
 				</nav>
@@ -107,8 +97,21 @@
 		<script src="../assets/js/packages.min.js"></script>
 		<script src="../assets/js/theme.min.js"></script>
 		<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
-		<script src="../customAssets/js/removeFrame.js"></script>
 		<script type="text/javascript">
+			var $imgUrl = $('#imgUrl');
+			var $projectTitle = $('#projectTitle');
+			var $description = $('#description');
+			var $urlText = $('#urlText');
+			var $url = $('#url');
+			var $projectList = $('#projectList');
+			var $mainImageDiv = $('#mainImageDiv');
+			var $visitSite = $('#visitSite');
+			function parseURL(url){
+				var a=document.createElement('a');
+				a.href=url;
+				return{hash:a.hash.replace('#','')};
+			}
+			whichProject = parseURL(window.location.href);
 			$(document).ready(function(){
 				$.getJSON('../projectsInfo.json', function(result){
 					$.each(result.projects,function(key,value){
@@ -130,14 +133,6 @@
 					console.log("== [ Request Failed: " + err + " ] ==");
 				});
 			});
-			var $imgUrl = $('#imgUrl');
-			var $projectTitle = $('#projectTitle');
-			var $description = $('#description');
-			var $urlText = $('#urlText');
-			var $url = $('#url');
-			var $projectList = $('#projectList');
-			var $mainImageDiv = $('#mainImageDiv');
-			var $visitSite = $('#visitSite');
 			function moreInfo(event){
 				var identifier = event.getAttribute('data-identifier');
 				$.getJSON('../projectsInfo.json', function(result){
@@ -145,11 +140,11 @@
 						if(value.identifier == identifier){
 							$projectTitle.empty().html(value.projectTitle);
 							$description.empty().html(value.description);
-							$urlText.empty().html(value.urlText);
-							$urlText.attr('href',value.url);
+							$urlText.empty().html( value.urlText);
+							$urlText.attr('href', value.url);
 							$urlText.attr('target','_blank');
 							$url.attr("href", value.url);
-							$visitSite.attr("href",value.url);
+							$visitSite.attr("href", value.url);
 							$url.attr("title", value.projectTitle);
 							document.getElementById('imgURL').setAttribute('src', value.imgUrl);
 						}
@@ -157,13 +152,6 @@
 				});
 				jQuery('html, body').animate({scrollTop: 0}, 1000);
 			}
-			function parseURL(url){
-				console.log(url);
-				var a=document.createElement('a');
-				a.href=url;
-				return{hash:a.hash.replace('#','')};
-			}
-			whichProject = parseURL(window.location.href);
 		</script>
 	</body>
 </html>
