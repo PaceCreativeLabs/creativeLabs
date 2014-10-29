@@ -10,3 +10,4 @@ node_modules/*
 !assets/css/swatch-blue-white.min.css
 !assets/css/swatch-white-blue.min.css
 !assets/js/map.min
+nohup.out
