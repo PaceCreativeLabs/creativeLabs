@@ -1,9 +1,9 @@
 {
 	"projects":{
 		"schimmel":{
-			"projectTitle":"Schimmel Theater",
+			"projectTitle":"Schimmel Center",
 			"imgUrl":"../customAssets/images/schimmelComp.png",
-			"description":"The Schimmel Theater Center at Pace University is a vibrant part of the New York theater scene that hosts a variety of productions around the year. From showcasing student work to visiting companies, such as the Shakespeare Globe Theater Company, the theater provides a creative outlet for a wide range of works from the classical to contemporary. The theater is most well-known for its role in filming Inside the Actor’s Studio with James Lipton a groundbreaking program that offers viewers intimate insights into their favorite actors. We were excited to redesign their website and we can’t help but feel it is a new rising star.",
+			"description":"The Schimmel Center at Pace University is a vibrant part of the New York theater scene that hosts a variety of productions around the year. From showcasing student work to visiting companies, such as the Shakespeare Globe Theater Company, the theater provides a creative outlet for a wide range of works from the classical to contemporary. The theater is most well-known for its role in filming Inside the Actor’s Studio with James Lipton a groundbreaking program that offers viewers intimate insights into their favorite actors. We were excited to redesign their website and we can’t help but feel it is a new rising star.",
 			"urlText":"<span class='overlay'>URL</span>http://www.schimmel.pace.edu",
 			"url":"http://schimmel.pace.edu",
 			"identifier":"schimmel"
@@ -11,7 +11,7 @@
 		"loma":{
 			"projectTitle":"Lower Manhattan Marketing Association",
 			"imgUrl":"../customAssets/images/LOMAComp.png",
-			"description":"Our relationship with the Lower Manhattan Marketing Association is one we hold close. Working with our friend Chris Wong we developed a content management system for the association to use in order to organize meeting information, user profiles, and a few other key things that they needed to have an on line presence.",
+			"description":"Our relationship with the Lower Manhattan Marketing Association is one we hold close. Working with our friend Chris Wong we developed a content management system for the association to use in order to organize meeting information, user profiles, and a few other key things that they needed to have an online presence.",
 			"urlText":"<span class='overlay'>URL</span>http://www.lowermanhattanmarketing.com/",
 			"url":"http://www.lowermanhattanmarketing.com/",
 			"identifier":"loma"
@@ -20,7 +20,7 @@
 			"projectTitle":"Skal New York",
 			"imgUrl":"../customAssets/images/SKALComp.png",
 			"descriptionTitle":"Skallll!",
-			"description":"Skal New York is another of our proud relationships with some local businesses. Skal New York is a tourist agency who were in need of a more to date looking website. In 2010 we collaborated with members of Skal and worked out a content management system for them to organize events, seminars, and have a user registration system for their international reach.",
+			"description":"Skal New York is another of our proud relationships with some local businesses. Skal New York is a tourist agency that was in need of a more up-to-date looking website. In 2010 we collaborated with members of Skal and worked out a content management system for them to organize events, seminars, and have a user registration system for their international reach.",
 			"urlText":"<span class='overlay'>URL</span>http://www.nyskal.com/",
 			"url":"http://www.nyskal.com/",
 			"identifier":"skal"
@@ -29,7 +29,7 @@
 			"projectTitle":"Media Breaker",
 			"imgUrl":"../customAssets/images/MediaBreakerComp.png",
 			"descriptionTitle":"Break dat media",
-			"description":"Our work with Media Breaker is a good example of our history with developing software. What it is that we did with Media Breaker was create an in-browser media-breaker, as the name denotes. The Media Breaker is meant for the public to have a centralized means of editing commercials that may in one way or another be discriminatory. It allows the public to have a way to interact with what is happening in the world and share their reactions. Users can break up a commercial in any variety of ways whether it's pausing in segments and inserting text-based commentary, or putting text and music over the commercial as it plays in the background.",
+			"description":"Our work with Media Breaker is a good example of our history with developing software. What we did with Media Breaker was.. create an in-browser media-breaker, as the name denotes. The Media Breaker is meant for the public to have a centralized means of editing commercials that may in one way or another be discriminatory. It allows the public to have a way to interact with what is happening in the world and share their reactions. Users can break up a commercial in a variety of ways whether it's pausing in segments and inserting text-based commentary, or putting text and music over the commercial as it plays in the background.",
 			"urlText":"<span class='overlay'>URL</span>http://mediabreaker.thelampnyc.org/",
 			"url":"http://mediabreaker.thelampnyc.org/",
 			"identifier":"mediabreaker"
