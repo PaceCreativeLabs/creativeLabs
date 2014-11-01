@@ -14,23 +14,23 @@ app.get('/team', function (req,res) {
 });
 
 app.get('/skills', function (req,res) {
-	res.send('services.html',{'root':'./html'});
+	res.send('services.html');
 });
 
 app.get('/projects', function (req,res) {
-	res.send('projects.html',{'root':'./html'});
+	res.send('projects.html');
 });
 
 app.get('/join', function (req,res) {
-	res.send('join.html',{'root':'./html'});
+	res.send('join.html');
 });
 
 app.get('/contact', function (req,res) {
-	res.send('contact.html',{'root':'./html'});
+	res.send('contact.html');
 });
 
 app.get('/project', function (req,res) {
-	res.send('singleproject.html',{'root':'./html'});
+	res.send('singleproject.html');
 });
 
 app.get('*', function(req, res){
