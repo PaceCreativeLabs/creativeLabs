@@ -1,4 +1,5 @@
-var express = require('express'), app = express();
+var express = require('express');
+var app = express();
 app.set('port',(process.env.PORT || 80));
 app.use(express.static(__dirname + '/html'));
 app.use(express.static(__dirname));
