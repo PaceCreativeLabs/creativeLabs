@@ -10,27 +10,27 @@ app.get('/home', function (req,res) {
 });
 
 app.get('/team', function (req,res) {
-	res.send('aboutandteam.html',{'root':'./html'});
+	res.status(200).send('aboutandteam.html',{'root':'./html'});
 });
 
 app.get('/skills', function (req,res) {
-	res.send('services.html');
+	res.status(200).send('services.html');
 });
 
 app.get('/projects', function (req,res) {
-	res.send('projects.html');
+	res.status(200).send('projects.html');
 });
 
 app.get('/join', function (req,res) {
-	res.send('join.html');
+	res.status(200).send('join.html');
 });
 
 app.get('/contact', function (req,res) {
-	res.send('contact.html');
+	res.status(200).send('contact.html');
 });
 
 app.get('/project', function (req,res) {
-	res.send('singleproject.html');
+	res.status(200).send('singleproject.html');
 });
 
 app.get('*', function(req, res){
