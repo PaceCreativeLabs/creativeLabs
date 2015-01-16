@@ -1,5 +1,6 @@
 assets/*
 assets/
+customAssets/images
 node_modules/*
 !assets/css/theme.css
 !assets/css/theme.min.css
