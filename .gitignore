@@ -1,14 +1,5 @@
 assets/*
-assets/
-customAssets/images
-node_modules/*
-!assets/css/theme.css
-!assets/css/theme.min.css
-!assets/css/bootstrap.css
-!assets/css/bootstrap.min.css
-!assets/css/swatch-blue-white.css
-!assets/css/swatch-white-blue.css
-!assets/css/swatch-blue-white.min.css
-!assets/css/swatch-white-blue.min.css
-!assets/js/map.min
 nohup.out
+customAssets/css/swatch*
+customAssets/images/*
+node_modules/*
